@@ -1,0 +1,14 @@
+body div {
+  background: red;
+}
+body span {
+  background: blue;
+}
+body p {
+  background: green;
+}
+body h1 {
+  background: green;
+  color: red;
+  font-size: 12px;
+}

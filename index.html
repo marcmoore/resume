@@ -1,0 +1,1909 @@
+<html>
+<head>
+<style>
+@font-face {
+	font-family: "QuickSand_Light";
+	src: url("images/fonts/Quicksand_Light.otf");
+}
+
+@font-face {
+	font-family: "Quicksand_Bold";
+	src: url("images/fonts/Quicksand_Bold.otf");
+}
+
+@font-face {
+	font-family: "Allura";
+	src: url("images/fonts/Allura.otf");
+}
+	
+html {
+	height: 100%;
+	font-family: QuickSand_Light, Helvetica, Arial, Tahoma, sans-serif;
+	font-weight: lighter;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+}
+
+h1 {
+	font-family: Allura, Helvetica, Arial, Tahoma, sans-serif;
+	font-size: 20px;
+}
+
+h2 {
+	font-family: Quicksand_Bold, Helvetica, Arial, Tahoma, sans-serif;
+	font-size: 14px;
+}
+
+ul {
+	list-style: none;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-padding-start: 0;
+}
+
+.red {
+	color: #DC143C;
+}
+
+strong {
+	font-family: Quicksand_Bold;
+}
+
+.first-section {
+	width: 100%;
+	height: 100%;
+}
+
+.first-section::after {
+	clear: both;
+}
+
+.big-box {
+	width: 50%;
+	height: 100%;
+	float: left;
+	z-index: 100;
+	position: relative;
+}
+
+.big-box.mark {
+	background: rgba(40, 40, 40, 1);
+}
+
+.big-box .icon {
+	width: 78px;
+	height: 137px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin-left: -39px;
+	margin-top: -68px;
+	background: url(images/icon-mark.png);
+	-webkit-transition-duration: 200ms;
+}
+
+.big-box:hover .icon {
+	opacity: 0;
+}
+
+.big-box .nav {
+	width: 100%;
+	height: 100%;
+	background: rgba(40, 40, 40, 1);
+	position: absolute;
+	top: 0;
+	-webkit-transition-duration: 500ms;
+	opacity: 0;
+}
+
+.big-box:hover .nav {
+	opacity: 1;
+}
+
+.big-box .nav .name-style {
+	width: 139px;
+	height: 22px;
+	position: absolute;
+	left: 50%;
+	margin-left: -70px;
+	background: url(images/Mark-Moore-style.png);
+	-webkit-transition-duration: 500ms;
+}
+
+.big-box:hover .nav .name-style {
+	margin-top: 12px;
+}
+
+.big-box .nav .name {
+	width: 95px;
+	height: 12px;
+	margin-top: 32px;
+	position: absolute;
+	left: 50%;
+	margin-left: -46px;
+	color: #fff;
+	-webkit-transition-duration: 500ms;
+}
+
+.big-box:hover .nav .name {
+	margin-top: 44px;
+}
+
+.big-box .position {
+	height: 216px;
+	color: #DC143C;
+	text-align: center;
+	font-size: 60px;
+	position: relative;
+	top: 24%;
+}
+
+.position-connect {
+	height: 80px;
+	width: 1px;
+	background: #DC143C;
+	margin: 0.2em auto;
+}
+
+.big-box .category{
+	position: relative;
+	top: 45%;
+}
+
+.big-box .category ul li {
+	border-top: 1px solid #DC143C;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #DC143C;
+	font-size: 14px;
+	font-weight: lighter;
+	-webkit-transition-duration: 200ms;
+	cursor: pointer;
+}
+
+.big-box .category ul li:last-child {
+	border-bottom: 1px solid #DC143C;
+}
+
+.big-box .category ul li:hover {
+	background: #DC143C;
+	color: rgba(40, 40, 40, 1);
+}
+
+.big-box .contacts {
+	position: relative;
+	top: 35%;
+	-webkit-transition-duration: 200ms;
+}
+
+.big-box:hover .contacts {
+	margin-top: -10px;
+}
+
+.big-box .contacts::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.big-box .contacts>div {
+	width: 33.3333333%;
+	height: 27px;
+	float: left;
+	-webkit-transition-duration: 200ms;
+	cursor: pointer;
+}
+
+.big-box .contacts .wechat .qr-code {
+	width: 102px;
+	height: 118px;
+	position: absolute;
+	top: -128px;
+	right: 0;
+	margin-right: -35px;
+	opacity: 0;
+	-webkit-transition-duration: 200ms;
+}
+
+.mark .contacts .wechat {
+	position: relative;
+	background: url(images/mark_wechat_bl.png) 100% 0 no-repeat;
+}
+
+.mark .contacts .wechat .qr-code {
+	background: url(images/mark_qr_code.png);
+}
+
+.mark .contacts .wechat:hover {
+	background: url(images/mark_wechat_re.png) 100% 0 no-repeat;
+}
+
+.mark .contacts .wechat:hover .qr-code {
+	opacity: 1;
+}
+
+.mark .contacts .qq {
+	background: url(images/mark_QQ_bl.png) 50% 0 no-repeat;
+}
+
+.mark .contacts .qq:hover {
+	background: url(images/mark_QQ_re.png) 50% 0 no-repeat;
+}
+
+.mark .contacts .weibo {
+	background: url(images/mark_weibo_bl.png) 0 0 no-repeat;
+}
+
+.mark .contacts .weibo:hover {
+	background: url(images/mark_weibo_re.png) 0 0 no-repeat;
+}
+
+.big-box.ash {
+	background: #DC143C;
+}
+
+.ash .icon {
+	width: 65px;
+	height: 138px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin-left: -33px;
+	margin-top: -69px;
+	background: url(images/icon-ash.png);
+}
+
+.ash .nav {
+	background: #DC143C;
+}
+
+.ash .nav .name-style {
+	width: 90px;
+	height: 23px;
+	margin-left: -45px;
+	background: url(images/Ash-Zou-style.png);
+}
+
+.ash .nav .name {
+	width: 64px;
+	height: 12px;
+	margin-left: -30px;
+	color: #fff;
+}
+
+.ash .position {
+	color: rgba(40, 40, 40, 1);
+}
+
+.ash .position-connect {
+	height: 80px;
+	width: 1px;
+	background: rgba(40, 40, 40, 1);
+}
+
+.ash .category ul li {
+	border-top: 1px solid rgba(40, 40, 40, 1);
+	color: rgba(40, 40, 40, 1);
+}
+
+.ash .category ul li:last-child {
+	border-bottom: 1px solid rgba(40, 40, 40, 1);
+}
+
+.ash .category ul li:hover {
+	background: rgba(40, 40, 40, 1);
+	color: #DC143C;
+}
+
+.ash .contacts .wechat {
+	position: relative;
+	background: url(images/ash_wechat_bl.png) 100% 0 no-repeat;
+}
+
+.ash .contacts .wechat .qr-code {
+	background: url(images/ash_qr_code.png);
+}
+
+.ash .contacts .wechat:hover {
+	background: url(images/ash_wechat_wh.png) 100% 0 no-repeat;
+}
+
+.ash .contacts .wechat:hover .qr-code {
+	opacity: 1;
+}
+
+.ash .contacts .qq {
+	background: url(images/ash_QQ_bl.png) 50% 0 no-repeat;
+}
+
+.ash .contacts .qq:hover {
+	background: url(images/ash_QQ_wh.png) 50% 0 no-repeat;
+}
+
+.ash .contacts .weibo {
+	background: url(images/ash_weibo_bl.png) 0 0 no-repeat;
+}
+
+.ash .contacts .weibo:hover {
+	background: url(images/ash_weibo_wh.png) 0 0 no-repeat;
+}
+
+.second-section {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.second-section::after {
+	clear: both;
+}
+
+@-webkit-keyframes portrait {
+	0% {
+		-webkit-transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.05);
+	}
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+.second-section .self-portrait {
+	width: 100%;
+	height: 100%;
+	-webkit-animation-name: "portrait";
+	-webkit-animation-duration: 30s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.section-container.mark .second-section .self-portrait {
+	background: url(images/mark_portrait_3.jpg) no-repeat;
+	background-size: cover;
+}
+
+.section-container.ash .second-section .self-portrait {
+	background: url(images/ash_personal_img.jpg) no-repeat;
+	background-size: cover;
+}
+
+.second-section .mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.second-section .name-style {
+	width: 139px;
+	height: 22px;
+	margin: 1em auto;
+	background: url(images/Mark-Moore-style.png);
+}
+
+.section-container.ash .second-section .name-style {
+	background: url(images/Ash-Zou-style.png);
+}
+
+.second-section .name {
+	width: 95px;
+	height: 12px;
+	margin: 1em auto;
+	text-align: center;
+	color: #fff;
+}
+
+.second-section .position {
+	color: #DC143C;
+	text-align: center;
+	font-size: 60px;
+	position: relative;
+	top: 10%;
+}
+
+.section-container.ash .second-section .position {
+	color: #fff;
+}
+
+.second-section .position-icon {
+	width: 80px;
+	height: 55px;
+	margin: 0 auto;
+	background: url(images/mark_icon_wh_2.png) no-repeat;
+}
+
+.section-container.ash .second-section .position-icon {
+	width: 60px;
+	height: 67px;
+	background: url(images/ash_icon.png) no-repeat;
+}
+
+.second-section .position-img {
+	width: 534px;
+	height: 286px;
+	margin: 30px auto;
+	background: url(images/mark_pm.png) no-repeat;
+}
+
+.section-container.ash .second-section .position-img {
+	width: 454px;
+	height: 307px;
+	background: url(images/ash.png) no-repeat;
+}
+
+.second-section .position-major {
+	margin-top: 0.6em;
+}
+
+.second-section .position-minor {
+	margin-top: 0.6em;
+}
+
+.second-section .contacts {
+	position: relative;
+	top: 45%;
+	width: 192px;
+	height: 27px;
+	margin: 0 auto;
+}
+
+.second-section .contacts>div {
+	width: 34px;
+	height: 27px;
+	margin: 0 15px;
+	-webkit-transition-duration: 200ms;
+	cursor: pointer;
+	float: left;
+	text-align: center;
+}
+
+.second-section .contacts .wechat .qr-code {
+	width: 102px;
+	height: 118px;
+	position: absolute;
+	top: -128px;
+	right: 20%;
+	margin-right: -35px;
+	opacity: 0;
+	-webkit-transition-duration: 200ms;
+}
+
+.second-section .see-more {
+	width: 68px;
+	height: 57px;
+	left: 50%;
+	margin-left: -34px;
+	position: absolute;
+	bottom: 100px;
+	background: url(images/ash_arrow.png) no-repeat;
+	background-position: 9px 30px;
+	color: #fff;
+	font-size: 20px;
+	opacity: 0.4;
+}
+
+.third-section {
+	margin-left: 30%;
+}
+
+.third-section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.nav-bar {
+	width: 30%;
+	height: 100%;
+	top: 0;
+	float: left;
+	border-right: 1px solid #282828;
+	box-sizing: border-box;
+	-webkit-transition-duration: 200ms;
+}
+
+.nav-bar.fix {
+	position: fixed;
+}
+
+.avatar-container {
+	width: 100%;
+	height: 20%;
+	overflow: hidden;
+	z-index: 1;
+	position: relative;
+}
+
+.avatar {
+	width: 100%;
+	height: 100%;
+	background: url(images/mark_portrait_1.jpg) no-repeat;
+	background-size: cover;
+	-webkit-transition-duration: 1000ms;
+	cursor: pointer;
+}
+
+.section-container.ash .avatar {
+	background-image: url(images/ash_personal_img.jpg);
+	background-position: 0;
+}
+
+.avatar:hover {
+	-webkit-transform: scale(1.01);
+}
+
+.favor {
+	width: 100%;
+	height: 20%;
+	background: url(images/mark_icon_wh.png) 50% no-repeat;
+}
+
+.section-container.ash .favor {
+	background-image: url(images/ash_icon_wh.png);
+}
+
+.nav-bar ul {
+	list-style: none;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-padding-start: 0;
+}
+
+.nav-bar ul li {
+	border-bottom: 1px solid #656565;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #656565;
+	font-size: 14px;
+	font-weight: lighter;
+	-webkit-transition-duration: 200ms;
+	cursor: pointer;
+}
+
+.nav-bar ul li span {
+	width: 1px;
+	height: 100%;
+	display: block;
+	float: right;
+	margin-right: -1px;
+	background: #282828;
+}
+
+.nav-bar ul li span.show {
+	background: #fff;
+}
+
+.nav-bar ul li:first-child {
+	border-top: 1px solid #656565;
+}
+
+.nav-bar ul li:hover, .nav-bar ul li.activited {
+	color: #DC143C;
+}
+
+.nav-bar .blank {
+	width: 100%;
+	height: 100%;
+	border-right: 1px solid #656565;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+
+.nav-bar.style2 ul {
+	z-index: 1;
+	position: relative;
+} 
+
+.nav-bar.style2 ul li {
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+
+.nav-bar.style2 ul li:hover, .nav-bar.style2 ul li.activited {
+	background: rgba(40, 40, 40, 1);
+	color: #DC143C;
+}
+
+.all-about-work {
+	width: 100%;
+	min-height: 100%;
+	float: right;
+	background: rgba(40, 40, 40, 1);
+	padding: 35px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.short-desc p {
+	width: 100%;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+.all-about-work ul li {
+	position: relative;
+	margin-left: 480px;
+	margin-bottom: 20px;
+	height: 300px;
+}
+
+.all-about-work ul li.style2 {
+	margin-left: 0;
+}
+
+.all-about-work ul li .project-thumbnail {
+	width: 450px;
+	height: 300px;
+	background: #9b9b9b;
+	float: left;
+	margin-left: -480px;
+	position: relative;
+	box-shadow: 0 0 12px rgba(40, 40, 40, 0.7);
+}
+
+.all-about-work ul li .project-thumbnail img.gray {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+	-webkit-transition-duration: 1s;
+}
+
+.all-about-work ul li.style2 .project-thumbnail {
+	clear: both;
+	position: absolute;
+	right: 0;
+	margin-left: 0;
+}
+
+.all-about-work ul li .project-title {
+	position: absolute;
+	top: 140px;
+	left: 380px;
+	width: 250px;
+	z-index: 1;
+	text-shadow: 4px 4px 10px #282828;
+}
+
+.all-about-work ul li.style2 .project-title {
+	left: -80px;
+}
+
+.all-about-work ul li .project-title .project-bottom {
+	width: 100px;
+	height: 3px;
+	background: #DC143C;	
+}
+
+.all-about-work ul li.style2 .project-desc {
+	margin-left: 5px;
+	float: left;
+	margin-right: 480px;
+}
+
+.all-about-work ul li:hover img.gray {
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-ms-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
+	filter: gray;
+}
+
+.all-about-work ul li .project-desc p {
+	line-height: 18px;
+	font-size: 14px;
+}
+
+.all-about-me {
+	width: 100%;
+	position: relative;
+	float: right;
+}
+
+.all-about-me h1 {
+	margin: 0;
+}
+
+.all-about-me p {
+	line-height: 26px;
+	font-size: 14px;
+}
+
+.all-about-me .about-me {
+	position: relative;
+	margin-right: 385px;
+	padding: 35px;
+}
+
+.all-about-me .about-me .mark {
+	position: absolute;
+	top: 0;
+	right: -385px;
+	width: 385px;
+	height: 905px;
+	background: url(images/bigM.png) no-repeat;
+}
+
+.all-about-me .about-me .ash {
+	position: absolute;
+	top: 0;
+	right: -385px;
+	width: 358px;
+	height: 885px;
+	background: url(images/bigA.png) no-repeat;
+}
+
+.all-about-me .about-me table {
+	width: 100%;
+}
+
+.all-about-me .about-me table td {
+	padding-bottom: 30px;
+	line-height: 22px;
+}
+
+.all-about-me .skills {
+	padding: 35px;
+}
+
+.all-about-me .skills::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.all-about-me .skills .personal-skills {
+	position: relative;
+}
+
+.all-about-me .skills .personal-skills::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.all-about-me .skills h2 {
+	margin-top: 30px;
+}
+
+.all-about-me .skills .canvas-personal-skills {
+	position: relative;
+	width: 16.666%;
+	margin-top: 30px;
+	float: left;
+}
+
+.all-about-me .skills .ash .canvas-personal-skills {
+	width: 20%;
+}
+
+.all-about-me .skills .canvas-personal-skills canvas {
+	display: block;
+	margin: 0 auto;
+}
+
+.all-about-me .skills .canvas-personal-skills .icon {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	left: 50%;
+	margin-top: -5px;
+	margin-left: -5px;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill1 .icon {
+	width: 40px;
+	height: 27px;
+	margin-top: -28px;
+	margin-left: -20px;
+	background: url(images/skills/ax.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill2 .icon {
+	width: 38px;
+	height: 27px;
+	margin-top: -28px;
+	margin-left: -19px;
+	background: url(images/skills/En.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill3 .icon {
+	width: 81px;
+	height: 27px;
+	margin-top: -28px;
+	margin-left: -40px;
+	background: url(images/skills/Html.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill4 .icon {
+	width: 62px;
+	height: 27px;
+	margin-top: -28px;
+	margin-left: -31px;
+	background: url(images/skills/Css.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill5 .icon {
+	width: 37px;
+	height: 27px;
+	margin-top: -28px;
+	margin-left: -19px;
+	background: url(images/skills/js.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill6 .icon {
+	width: 50px;
+	height: 27px;
+	margin-top: -28px;
+	margin-left: -25px;
+	background: url(images/skills/Git.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill7 .icon {
+	width: 37px;
+	height: 32px;
+	margin-top: -28px;
+	margin-left: -18px;
+	background: url(images/skills/sketch.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill8 .icon {
+	width: 36px;
+	height: 28px;
+	margin-top: -28px;
+	margin-left: -18px;
+	background: url(images/skills/ps.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill9 .icon {
+	width: 30px;
+	height: 28px;
+	margin-top: -28px;
+	margin-left: -15px;
+	background: url(images/skills/ai.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill10 .icon {
+	width: 28px;
+	height: 28px;
+	margin-top: -28px;
+	margin-left: -14px;
+	background: url(images/skills/in.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills.skill11 .icon {
+	width: 34px;
+	height: 28px;
+	margin-top: -28px;
+	margin-left: -17px;
+	background: url(images/skills/Lr.png) no-repeat;
+}
+
+.all-about-me .skills .canvas-personal-skills .legend {
+	text-align: center;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.all-about-me .skills .canvas-professional-skills {
+	float: left;
+}
+
+.all-about-me .skills .canvas-professional-skills canvas {
+	margin-top: -55px;
+}
+
+.all-about-me .hire-me {
+	padding: 35px;
+}
+
+.all-about-me .hire-me::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.all-about-me .hire-me ul {
+	margin: 10px;
+}
+
+.all-about-me .hire-me ul li {
+	float: left;
+	width: 25%;
+}
+
+.all-about-me .interest {
+	padding: 35px;
+}
+
+.all-about-me .interest ul {
+	list-style: none;
+	margin-top: 30px;
+}
+
+.all-about-me .interest ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.all-about-me .interest ul li {
+	float: left;
+	text-align: center;
+	width: 12.5%;
+}
+
+.forth-section {
+	margin-left: 30%;
+}
+
+.forth-section::after, .fifth-section::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.fifth-section {
+	margin-left: 30%;
+}
+
+.fifth-section .all-about-me .thanks {
+	padding: 35px;
+}
+
+.fifth-section .all-about-me .sns {
+	padding: 35px;
+}
+
+.fifth-section .all-about-me .sns h3 {
+	font-size: 40px;
+	margin: 0;
+	font-family: QuickSand_Light, Tahoma, Helvetica, Arial,sans-serif;
+}
+
+.fifth-section .all-about-me .sns h3 span {
+	border-bottom: 1px solid rgba(40, 40, 40, 1);
+	-webkit-transition-duration: 300ms;
+}
+
+.fifth-section .all-about-me .sns h3 span:hover {
+	background: #DC143C;
+}
+
+.fifth-section .all-about-me .footer {
+	width: 100%;
+	height: 120px;
+	display: block;
+	background: rgba(40, 40, 40, 1);
+	bottom: 0;
+	padding: 15px 35px;
+	color: #fff;
+	box-sizing: border-box;
+}
+
+.section-container.ash .fifth-section .all-about-me .footer {
+	background: #DC143C;
+}
+
+.section-container.mark .mark {
+	display: block;
+	opacity: 1;
+	-webkit-transition-duration: 200ms;
+}
+
+.section-container.mark .ash {
+	display: none;
+	opacity: 0;
+}
+
+.section-container.ash .ash {
+	display: block;
+	opacity: 1;
+}
+
+.section-container.ash .mark {
+	display: none;
+	opacity: 0:
+}
+
+.pre-loading {
+	width: 100%;
+	height: 100%;
+	background: #282828;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+.pre-loading .loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+	perspective: 600px;
+	transform-style: perserve-3d;
+}
+
+/* The dot */
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  width: 20px;
+  height: 20px;
+  
+  margin-left: -10px;
+  margin-top: -10px;
+  
+  border-radius: 100px;
+  
+  background-color: #DC143C;
+  
+  transform-style: perserve-3d;
+  transform: rotateZ(0) translateY(0) scaleX(1);
+  
+  animation: dot 2200ms cubic-bezier(.39,.24,.63,.74) infinite;
+}
+
+.dot:nth-child(2) { animation-name: dot2; }
+.dot:nth-child(3) { animation-name: dot3; }
+.dot:nth-child(4) { animation-name: dot4; }
+
+@keyframes dot {
+  0% {
+    transform: rotateZ(0) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+  30% {
+    transform: rotateZ(180deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  50% {
+    transform: rotateZ(360deg) translateY(-20px) scaleX(1.1);
+    background-color: #ec6b85;
+  }
+  70% {
+    transform: rotateZ(540deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  100% {
+    transform: rotateZ(720deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+}
+
+@keyframes dot2 {
+  0% {
+    transform: rotateZ(0deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+  30% {
+    transform: rotateZ(180deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  50% {
+    transform: rotateZ(270deg) translateY(-20px) scaleX(1.1);
+    background-color: #ec6b85;
+  }
+  70% {
+    transform: rotateZ(360deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  100% {
+    transform: rotateZ(540deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+}
+
+@keyframes dot3 {
+  0% {
+    transform: rotateZ(-180deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+  30% {
+    transform: rotateZ(0deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  50% {
+    transform: rotateZ(180deg) translateY(-20px) scaleX(1.1);
+    background-color: #ec6b85;
+  }
+  70% {
+    transform: rotateZ(360deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  100% {
+    transform: rotateZ(540deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+}
+
+@keyframes dot4 {
+  0% {
+    transform: rotateZ(-180deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+  30% {
+    transform: rotateZ(0deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  50% {
+    transform: rotateZ(90deg) translateY(-20px) scaleX(1.1);
+    background-color: #ec6b85;
+  }
+  70% {
+    transform: rotateZ(180deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  100% {
+    transform: rotateZ(360deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+	.big-box .nav, .nav-bar, .about-me .big-icon {
+		display: none !important;
+	}
+}
+
+</style>
+</head>
+<body>
+<div class="first-section">
+	<div class="big-box mark" name="mark">
+		<div class="icon"></div>
+		<div class="nav">
+			<div class="name-style"></div>
+			<div class="name">Mark Moore</div>
+			<div class="position">
+				<div class="position-major">Product Manager</div>
+				<div class="position-connect"></div>
+				<div class="position-minor">Front-End Engineer</div>
+			</div>
+			<div class="category">
+				<ul>
+					<li data-ar="third-section">Projects</li>
+					<li data-ar="forth-section">About me</li>
+					<li data-ar="fifth-section">Contact</li>
+				</ul>
+			</div>
+			<!--<div class="contacts">
+				<div class="wechat">
+					<div class="qr-code"></div>
+				</div>
+				<div class="qq"></div>
+				<div class="weibo"></div>
+			</div>-->
+		</div>
+	</div>
+	<div class="big-box ash" name="ash">
+		<div class="icon"></div>
+		<div class="nav">
+			<div class="name-style"></div>
+			<div class="name">Ash Zou</div>
+			<div class="position">
+				<div class="position-major">UI Designer</div>
+				<div class="position-connect"></div>
+				<div class="position-minor">Art Direction</div>
+			</div>
+			<div class="category">
+				<ul>
+					<li>Projects</li>
+					<li>About me</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+			<!--<div class="contacts">
+				<div class="wechat">
+					<div class="qr-code"></div>
+				</div>
+				<div class="qq"></div>
+				<div class="weibo"></div>
+			</div>-->
+		</div>
+	</div>
+</div>
+<div class="section-container mark">
+	<div class="second-section">
+		<div class="self-portrait"></div>
+		<div class="mask">
+			<div class="name-style"></div>
+			<div class="name mark">Mark Moore</div>
+			<div class="name ash">Ash Zou</div>
+			<div class="position">
+				<div class="position-icon"></div>
+				<div class="position-img"></div>
+<!--				<div class="position-major">Product Manager</div>
+				<div class="position-minor">Front-End Engineer</div>-->
+			</div>
+			<!--<div class="position">
+				<div class="position-icon"></div>
+				<div class="position-major">UI Designer</div>
+				<div class="position-minor">Art Direction</div>
+			</div>-->
+			<div class="see-more">Details</div>
+			<img src="images/ash_personal_img.jpg" width="0" height="0" alt="">
+			<img src="images/ash.png" width="0" height="0" alt="">
+		</div>
+	</div>
+	<div class="nav-bar style2">
+		<div class="avatar-container">
+			<div class="avatar"></div>
+		</div>
+		<div class="favor"></div>
+		<ul>
+			<li data-ar="first-section" class="home">Home</li>
+			<li data-ar="third-section" class="work activited">Projects<span></span></li>
+			<li data-ar="forth-section" class="about-me">About me<span></span></li>
+			<!--<li data-ar="fifth-section" class="contact ash">Contact</li>-->
+		</ul>
+		<!--<div class="blank"></div>-->
+	</div>
+	<div class="third-section">
+		<div class="all-about-work mark">
+			<div class="short-desc">
+				<h1>Projects</h1>
+				<p>There are plenty of works I have done during these few years.</p>
+			</div>
+			<ul>
+				<li class="style1">
+					<div class="project-thumbnail">
+						<div class="project-title">
+							<h2>WorldCruise.cn</h2>
+							<p>PM and FE developer</p>
+							<div class="project-bottom"></div>
+						</div>
+						<img src="images/projects/ylly.jpg" width="450" height="300" class="gray" alt="worldcruie.cn">
+					</div>
+					<div class="project-desc">
+						<h3>WorldCruise.cn</h3>
+						<p>I'm one of the product managers here. In charge of the mobile app. Participate in parts of the website.</p>
+						<p>Also I am one of the FE developers. UX designer for the mobile app.</p>
+					</div>
+				</li>
+				<li class="style2">
+					<div class="project-desc">
+						<h3>Pento.cn</h3>
+						<p>I'm FE developer here. In charge of the website and Chrome extension.</p>
+					</div>
+					<div class="project-thumbnail">
+						<div class="project-title">
+							<h2>Pento.cn</h2>
+							<p>PM and FE developer</p>
+							<div class="project-bottom"></div>
+						</div>
+						<img src="images/projects/pento_web.jpg" width="450" height="300" class="gray" alt="pento.cn">
+					</div>
+				</li>
+				<li class="style1">
+					<div class="project-thumbnail">
+						<div class="project-title">
+							<h2>Lakala</h2>
+							<p>Project Manager</p>
+							<div class="project-bottom"></div>
+						</div>
+						<img src="images/projects/lakala.jpg" width="450" height="300" class="gray" alt="lakala">
+					</div>
+					<div class="project-desc">
+						<h3>Lakala</h3>
+						<p>I'm the project manager in this project. In charge of the mobile app. Participate in parts of the website.</p>
+						<p>FE developer of the website. UX designer of the mobile app.</p>
+					</div>
+				</li>
+				<li class="style2">
+					<div class="project-desc">
+						<h3>民生养老</h3>
+						<p>I'm FE developer here. In charge of the website.</p>
+					</div>
+					<div class="project-thumbnail">
+						<div class="project-title">
+							<h2>民生养老</h2>
+							<p>FE developer</p>
+							<div class="project-bottom"></div>
+						</div>
+						<img src="images/projects/minsheng.jpg" width="450" height="300" class="gray" alt="minsheng">
+					</div>
+				</li>
+				<li class="style1">
+					<div class="project-thumbnail">
+						<div class="project-title">
+							<h2>Bing news</h2>
+							<p>FE developer</p>
+							<div class="project-bottom"></div>
+						</div>
+						<img src="images/projects/bing.jpg" width="450" height="300" class="gray" alt="Bing news">
+					</div>
+					<div class="project-desc">
+						<h3>Bing news</h3>
+						<p>I'm FE developer in this project. In charge of the mobile app. Participate in parts of the website.</p>
+						<p>FE developer of the website. UX designer of the mobile app.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="all-about-work ash">
+			<div class="short-desc">
+				<h1>Projects</h1>
+				<p>There are plenty of works I have done during these few years.</p>
+			</div>
+			<ul>
+				<li>
+					<div class="project-thumbnail">
+						<div class="project-title">
+							<h2>WorldCruise.cn</h2>
+							<p>UI & UX designer </p>
+							<div class="project-bottom"></div>
+						</div>
+						<img src="images/projects/ylly.jpg" width="450" height="300" class="gray" alt="worldcruie.cn">
+					</div>
+					<div class="project-desc">
+						<h3>WorldCruise.cn</h3>
+						<p>I'm one of product managers here. In charge of the mobile app. Participate in parts of the website.</p>
+						<p>FE developer of the website. UX designer of the mobile app.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="forth-section">
+		<div class="all-about-me">
+			<div class="about-me mark">
+				<h1>About me</h1>
+				<p>Hi, my name is Mark Moore.</p>
+				<p>It's been a while since last time I update my resume. So I decided to create a better one.</p>
+				<p>As a man who was living in the ocean of internet, should be familiar with a lot of skills. Internet has been changing people's life so much. I was trying to change the internet as much as I can by using those skills.</p>
+				<p></p>
+				<table>
+					<tr>
+						<td><strong>Eduction<br>&nbsp;</strong></td>
+						<td>
+							<span class="red">Computer Science and Technology</span><br>
+							<i>Beijing Institute of Petrochemical Technology</i>
+						</td>
+						<td>
+							2005-2009<br>
+							Beijing, China
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<strong>Work<br>
+							Experience</strong>
+						</td>
+						<td>
+							<span class="red">Project Manager, Front End Developer</span><br>
+							<i>Beijing Xuning information technology Co., Ltd.</i>
+						</td>
+						<td>
+							2010 - 2014<br>
+							Beijing, China
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<span class="red">Product Manager, Front End Developer</span><br>
+							<i>Bestours Software</i>
+						</td>
+						<td>
+							2014 - Now<br>
+							Beijing, China
+						</td>
+					</tr>
+				</table>
+				<div class="big-icon mark"></div>
+			</div>
+			<div class="about-me ash">
+				<h1>About me</h1>
+				<p>Hi ! I’m Ash. a twenty seven years old UI designer based in Beijing, China.</p>
+				<p>Since I was a kid I wanted to be a designer. So during the four years I’ve spent full 4 years studying, I finished the Digital Graphics & Design courses and made my dream come true.</p>
+				<p>I have more than 5 years of experience in design and worked with different companies from Beijing, being responsible for tasks ranging from Web UI design, Mob App UI design and Brand design. After almost 5 years of professional working experience, I have overcome many challenges, in the meantime, I have done some incredible things.</p>
+				<p>Concentrate on design is the main principle of my career. As a designer, I do understand the importance and real value of putting my mind into design. That’s why I am able to assure you that find lots of details in my projects. Nevertheless, the outcome always has finished on time. </p>
+				<p>For me, true success comes from giving 200% on all projects I accept to work on. That means keeping an eye on all the small details within the design and creating something that makes sense for both the users and clients.</p>
+				<p>I don't think that there are small or big clients, instead I choose to work only on opportunities that excite me, because that excitement translates into passion which allows me to create something unique - something that creates a memorable effect on anyone who sees it.</p>
+				<p>If you just want to say “hi”, or you have a project that you would like to get me involved in, please don't hesitate to contact me :)</p>
+				<table>
+					<tr>
+						<td><strong>Eduction<br>&nbsp;</strong></td>
+						<td>
+							<span class="red">Digital Design</span><br>
+							<i>North China University of Technology</i>
+						</td>
+						<td>
+							2006 - 2010<br>
+							Beijing, China
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<strong>Work<br>
+							Experience</strong>
+						</td>
+						<td>
+							<span class="red">UI Designer</span><br>
+							<i>Ibokan Wisdom</i>
+						</td>
+						<td>
+							2011 - 2013<br>
+							Beijing, China
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<span class="red">Art Direction</span><br>
+							<i>CCITS</i>
+						</td>
+						<td>
+							2013 - 2014<br>
+							Beijing, China
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<span class="red">UI Designer</span><br>
+							<i>Bestours Software</i>
+						</td>
+						<td>
+							2014 - Now<br>
+							Beijing, China
+						</td>
+					</tr>
+				</table>
+				<div class="big-icon ash"></div>
+			</div>
+			<div class="skills">
+				<h1>Skills</h1>
+				<p class="mark">Since I was working for a outsourcing company for a while. I tried to learn as much as I can. These is pretty much what I can do now.</p>
+				<p class="ash">I’m a Chinese designer focused on user interface and art direction. I’m passionate about imagining fresh and clean interfaces, and help making those be real.</p>
+				<div class="personal-skills mark">
+					<h2>Personal Skills</h2>
+					<div class="canvas canvas-personal-skills skill1">
+						<canvas id="chart-area" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">Ax <span class="red">70%</span></div>
+					</div>
+					<div class="canvas canvas-personal-skills skill2">
+						<canvas id="chart-area1" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">En <span class="red">70%</span></div>
+					</div>
+					<div class="canvas canvas-personal-skills skill3">
+						<canvas id="chart-area2" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">Html <span class="red">90%</span></div>
+					</div>
+					<div class="canvas canvas-personal-skills skill4">
+						<canvas id="chart-area3" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">Css <span class="red">90%</span></div>
+					</div>
+					<div class="canvas canvas-personal-skills skill5">
+						<canvas id="chart-area4" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">JS <span class="red">80%</span></div>
+					</div>
+					<div class="canvas canvas-personal-skills skill6">
+						<canvas id="chart-area5" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">Git <span class="red">75%</span></div>
+					</div>
+				</div>
+				<div class="personal-skills ash">
+					<h2>Personal Skills</h2>
+					<div class="canvas canvas-personal-skills skill7">
+						<canvas id="chart-area6" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">Sketch <span class="red">85%</span></div>
+					</div>
+					<div class="canvas canvas-personal-skills skill8">
+						<canvas id="chart-area7" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">Photoshop <span class="red">80%</span></div>
+					</div>
+					<div class="canvas canvas-personal-skills skill9">
+						<canvas id="chart-area8" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">Illustrator <span class="red">80%</span></div>
+					</div>
+					<div class="canvas canvas-personal-skills skill10">
+						<canvas id="chart-area9" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">Indesign <span class="red">70%</span></div>
+					</div>
+					<div class="canvas canvas-personal-skills skill11">
+						<canvas id="chart-area10" width="120" height="120"></canvas>
+						<div class="icon"></div>
+						<div class="legend">Lightroom <span class="red">50%</span></div>
+					</div>
+				</div>
+				<!--<div class="professional-skills ash">
+					<h2>Professional Skills</h2>
+					<div class="canvas canvas-professional-skills">
+						<canvas id="chart-area-radar" width="400" height="400"></canvas>
+					</div>
+					<h2>About me</h2>
+					<p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet</p>
+					<p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet</p>
+				</div>-->
+			</div>
+			<!--<div class="hire-me ash">
+				<h1>Hire me!</h1>
+				<ul>
+					<li>
+						<h2>About me</h2>
+						<p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet</p>
+					</li>
+					<li>
+						<h2>About me</h2>
+						<p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet</p>
+					</li>
+					<li>
+						<h2>About me</h2>
+						<p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet</p>
+					</li>
+					<li>
+						<h2>About me</h2>
+						<p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet</p>
+					</li>
+				</ul>
+			</div>-->
+			<div class="interest ash">
+				<h1>Interest</h1>
+				<ul>
+					<li>
+						<img src="images/interests/photography.png" style="margin-top: 12px;" alt="Photography">
+						<p>Photography</p>
+					</li>
+					<li>
+						<img src="images/interests/sports.png" alt="Sports">
+						<p>Sports</p>
+					</li>
+					<li>
+						<img src="images/interests/planting.png" style="margin-top: 4px;" alt="Planting">
+						<p>Planting</p>
+					</li>
+					<li>
+						<img src="images/interests/teaism.png" alt="Tea">
+						<p>Tea</p>
+					</li>
+					<li>
+						<img src="images/interests/cooking.png" style="margin-top: 6px;" alt="Cooking">
+						<p>Cooking</p>
+					</li>
+					<li>
+						<img src="images/interests/games.png" alt="Games">
+						<p>Games</p>
+					</li>
+					<li>
+						<img src="images/interests/reading.png" style="margin-top: 12px;" alt="Reading">
+						<p>Reading</p>
+					</li>
+					<li>
+						<img src="images/interests/writing.png" alt="Writing">
+						<p>Writing</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="fifth-section">
+		<div class="all-about-me">
+			<!--<div class="thanks ash">
+				<h1>Thanks for visiting!</h1>
+				<p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet</p>
+				<p>Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet</p>
+			</div>-->
+			<div class="sns mark">
+				<h3>Say hello to <span>mahaoxun@gmail.com</span></h3>
+			</div>
+			<div class="sns ash">
+				<h3>Say hello to <span>ash.zou@gmail.com</span></h3>
+			</div>
+			<div class="footer">
+				<p>Mark Moore & Ash Zou</p>
+				<p>With passion from Beijing. 2015&copy;</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pre-loading">
+	<div class="loader">
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/plugins/jpreloader-v2/js/jpreloader.min.js"></script>
+<script>
+var doughnutData = {
+	"markSkill1" : [
+		{
+			value: 70,
+			color:"#DC143C"
+		},
+		{
+			value: 30,
+			color: "#9b9b9b"
+		}
+	],
+	"markSkill2" : [
+		{
+			value: 70,
+			color:"#DC143C"
+		},
+		{
+			value: 30,
+			color: "#9b9b9b"
+		}
+	],
+	"markSkill3" : [
+		{
+			value: 90,
+			color:"#DC143C"
+		},
+		{
+			value: 10,
+			color: "#9b9b9b"
+		}
+	],
+	"markSkill4" : [
+		{
+			value: 90,
+			color:"#DC143C"
+		},
+		{
+			value: 10,
+			color: "#9b9b9b"
+		}
+	],
+	"markSkill5" : [
+		{
+			value: 80,
+			color:"#DC143C"
+		},
+		{
+			value: 20,
+			color: "#9b9b9b"
+		}
+	],
+	"markSkill6" : [
+		{
+			value: 75,
+			color:"#DC143C"
+		},
+		{
+			value: 25,
+			color: "#9b9b9b"
+		}
+	],
+	"ashSkill1" : [
+		{
+			value: 85,
+			color:"#DC143C"
+		},
+		{
+			value: 15,
+			color: "#9b9b9b"
+		}
+	],
+	"ashSkill2" : [
+		{
+			value: 80,
+			color:"#DC143C"
+		},
+		{
+			value: 20,
+			color: "#9b9b9b"
+		}
+	],
+	"ashSkill3" : [
+		{
+			value: 80,
+			color:"#DC143C"
+		},
+		{
+			value: 20,
+			color: "#9b9b9b"
+		}
+	],
+	"ashSkill4" : [
+		{
+			value: 70,
+			color:"#DC143C"
+		},
+		{
+			value: 30,
+			color: "#9b9b9b"
+		}
+	],
+	"ashSkill5" : [
+		{
+			value: 50,
+			color:"#DC143C"
+		},
+		{
+			value: 50,
+			color: "#9b9b9b"
+		}
+	]
+};
+
+var radarChartData = {
+	labels: ["Communication", "Organization", "Creation", "Mutual", "Responsibility", "Language", "Confidence"],
+	datasets: [
+		{
+			label: "My First dataset",
+			fillColor: "rgba(254,54,51,0.2)",
+			strokeColor: "rgba(254,54,51,1)",
+			data: [90,81,72,93,84,76,96]
+		},
+		{
+			label: "My First dataset",
+			fillColor: "rgba(254,54,51,0)",
+			strokeColor: "rgba(0,0,0,1)",
+			data: [100,100,100,100,100,100,100]
+		},
+		{
+			label: "My First dataset",
+			fillColor: "rgba(254,54,51,1)",
+			strokeColor: "rgba(0,0,0,1)",
+			data: [0,0,0,0,0,0,0]
+		},
+	]
+};
+
+$(document).ready(function(){
+	$('body').jpreLoader({
+		autoClose: true,
+		showPercentage: false
+	}, function() {	//callback function
+		$(".pre-loading").fadeOut(300);
+	});
+	
+	var ctx = document.getElementById("chart-area").getContext("2d");
+	var ctx1 = document.getElementById("chart-area1").getContext("2d");
+	var ctx2 = document.getElementById("chart-area2").getContext("2d");
+	var ctx3 = document.getElementById("chart-area3").getContext("2d");
+	var ctx4 = document.getElementById("chart-area4").getContext("2d");
+	var ctx5 = document.getElementById("chart-area5").getContext("2d");
+	var ctx6 = document.getElementById("chart-area6").getContext("2d");
+	var ctx7 = document.getElementById("chart-area7").getContext("2d");
+	var ctx8 = document.getElementById("chart-area8").getContext("2d");
+	var ctx9 = document.getElementById("chart-area9").getContext("2d");
+	var ctx10 = document.getElementById("chart-area10").getContext("2d");
+	//var ctxRadar = document.getElementById("chart-area-radar").getContext("2d");
+	window.myDoughnut = new Chart(ctx).Doughnut(doughnutData.markSkill1, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx1).Doughnut(doughnutData.markSkill2, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx2).Doughnut(doughnutData.markSkill3, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx3).Doughnut(doughnutData.markSkill4, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx4).Doughnut(doughnutData.markSkill5, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx5).Doughnut(doughnutData.markSkill6, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx6).Doughnut(doughnutData.ashSkill1, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx7).Doughnut(doughnutData.ashSkill2, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx8).Doughnut(doughnutData.ashSkill3, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx9).Doughnut(doughnutData.ashSkill4, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	window.myDoughnut = new Chart(ctx10).Doughnut(doughnutData.ashSkill5, {
+		responsive : true, 
+		percentageInnerCutout: 93, 
+		animateRotate: true
+	});
+	// window.myRadar = new Chart(ctxRadar).Radar(radarChartData, {
+	// 	responsive: true,
+	// 	pointDot: false
+	// });
+	
+	$(".big-box").on("mouseover", function () {
+		$(".section-container").attr("class", "section-container");
+		$(".section-container").addClass($(this).attr("name"));
+	});
+	
+	var increment = 50;
+	
+	$(window).scroll(function() {
+		console.log();
+		if (window.scrollY > $(".third-section").offset().top) {
+			$(".nav-bar").addClass("fix");
+		} else {
+			$(".nav-bar").removeClass("fix");
+		}
+		
+		if ((window.scrollY + increment) > $(".third-section").offset().top && window.scrollY < $(".forth-section").offset().top) {
+			$(".nav-bar .activited").removeClass("activited");
+			$(".nav-bar .work").addClass("activited");
+		}
+		
+		if ((window.scrollY + increment) > $(".forth-section").offset().top && window.scrollY < $(".fifth-section").offset().top) {
+			$(".nav-bar .activited").removeClass("activited");
+			$(".nav-bar .about-me").addClass("activited");
+		}
+		
+		if ((window.scrollY + increment) > $(".fifth-section").offset().top) {
+			$(".activited").removeClass("activited");
+			$(".nav-bar .contact").addClass("activited");
+		}
+
+		if ($(".forth-section").offset().top < $(".nav-bar ul li.activited").offset().top) {
+			$(".nav-bar .show").removeClass("show");
+			$(".nav-bar ul li.activited span").addClass("show");
+			$(".nav-bar ul li.activited").css("background", "#fff");
+		} else {
+			$(".nav-bar .show").removeClass("show");
+			$(".nav-bar ul li.activited").css("background", "#282828");
+		}
+	});
+	
+	$(".nav-bar li, .category li").click(function(event){		
+		event.preventDefault();
+		console.log($(this).data("ar"));
+		$("html, body").animate({scrollTop:$("." + $(this).data("ar")).offset().top}, 1000, 'easeInOutQuart');
+	});
+});
+</script>
+</body>
+</html>
