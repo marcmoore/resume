@@ -1,14 +1,14 @@
 @font-face {
   font-family: "QuickSand_Light";
-  src: url("images/fonts/Quicksand_Light.otf");
+  src: url("../images/fonts/Quicksand_Light.otf");
 }
 @font-face {
   font-family: "Quicksand_Bold";
-  src: url("images/fonts/Quicksand_Bold.otf");
+  src: url("../images/fonts/Quicksand_Bold.otf");
 }
 @font-face {
   font-family: "Allura";
-  src: url("images/fonts/Allura.otf");
+  src: url("../images/fonts/Allura.otf");
 }
 html {
   height: 100%;
@@ -64,7 +64,7 @@ strong {
   top: 50%;
   margin-left: -39px;
   margin-top: -68px;
-  background: url(images/icon-mark.png);
+  background: url(../images/icon-mark.png);
   -webkit-transition-duration: 200ms;
 }
 .big-box:hover .icon {
@@ -88,7 +88,7 @@ strong {
   position: absolute;
   left: 50%;
   margin-left: -70px;
-  background: url(images/Mark-Moore-style.png);
+  background: url(../images/Mark-Moore-style.png);
   -webkit-transition-duration: 500ms;
 }
 .big-box:hover .nav .name-style {
@@ -175,28 +175,28 @@ strong {
 }
 .mark .contacts .wechat {
   position: relative;
-  background: url(images/mark_wechat_bl.png) 100% 0 no-repeat;
+  background: url(../images/mark_wechat_bl.png) 100% 0 no-repeat;
 }
 .mark .contacts .wechat .qr-code {
-  background: url(images/mark_qr_code.png);
+  background: url(../images/mark_qr_code.png);
 }
 .mark .contacts .wechat:hover {
-  background: url(images/mark_wechat_re.png) 100% 0 no-repeat;
+  background: url(../images/mark_wechat_re.png) 100% 0 no-repeat;
 }
 .mark .contacts .wechat:hover .qr-code {
   opacity: 1;
 }
 .mark .contacts .qq {
-  background: url(images/mark_QQ_bl.png) 50% 0 no-repeat;
+  background: url(../images/mark_QQ_bl.png) 50% 0 no-repeat;
 }
 .mark .contacts .qq:hover {
-  background: url(images/mark_QQ_re.png) 50% 0 no-repeat;
+  background: url(../images/mark_QQ_re.png) 50% 0 no-repeat;
 }
 .mark .contacts .weibo {
-  background: url(images/mark_weibo_bl.png) 0 0 no-repeat;
+  background: url(../images/mark_weibo_bl.png) 0 0 no-repeat;
 }
 .mark .contacts .weibo:hover {
-  background: url(images/mark_weibo_re.png) 0 0 no-repeat;
+  background: url(../images/mark_weibo_re.png) 0 0 no-repeat;
 }
 .big-box.ash {
   background: #DC143C;
@@ -209,7 +209,7 @@ strong {
   top: 50%;
   margin-left: -33px;
   margin-top: -69px;
-  background: url(images/icon-ash.png);
+  background: url(../images/icon-ash.png);
 }
 .ash .nav {
   background: #DC143C;
@@ -218,7 +218,7 @@ strong {
   width: 90px;
   height: 23px;
   margin-left: -45px;
-  background: url(images/Ash-Zou-style.png);
+  background: url(../images/Ash-Zou-style.png);
 }
 .ash .nav .name {
   width: 64px;
@@ -247,28 +247,28 @@ strong {
 }
 .ash .contacts .wechat {
   position: relative;
-  background: url(images/ash_wechat_bl.png) 100% 0 no-repeat;
+  background: url(../images/ash_wechat_bl.png) 100% 0 no-repeat;
 }
 .ash .contacts .wechat .qr-code {
-  background: url(images/ash_qr_code.png);
+  background: url(../images/ash_qr_code.png);
 }
 .ash .contacts .wechat:hover {
-  background: url(images/ash_wechat_wh.png) 100% 0 no-repeat;
+  background: url(../images/ash_wechat_wh.png) 100% 0 no-repeat;
 }
 .ash .contacts .wechat:hover .qr-code {
   opacity: 1;
 }
 .ash .contacts .qq {
-  background: url(images/ash_QQ_bl.png) 50% 0 no-repeat;
+  background: url(../images/ash_QQ_bl.png) 50% 0 no-repeat;
 }
 .ash .contacts .qq:hover {
-  background: url(images/ash_QQ_wh.png) 50% 0 no-repeat;
+  background: url(../images/ash_QQ_wh.png) 50% 0 no-repeat;
 }
 .ash .contacts .weibo {
-  background: url(images/ash_weibo_bl.png) 0 0 no-repeat;
+  background: url(../images/ash_weibo_bl.png) 0 0 no-repeat;
 }
 .ash .contacts .weibo:hover {
-  background: url(images/ash_weibo_wh.png) 0 0 no-repeat;
+  background: url(../images/ash_weibo_wh.png) 0 0 no-repeat;
 }
 .second-section {
   width: 100%;
@@ -299,11 +299,11 @@ strong {
   -webkit-animation-iteration-count: infinite;
 }
 .section-container.mark .second-section .self-portrait {
-  background: url(images/mark_portrait_3.jpg) no-repeat;
+  background: url(../images/mark_portrait_3.jpg) no-repeat;
   background-size: cover;
 }
 .section-container.ash .second-section .self-portrait {
-  background: url(images/ash_personal_img.jpg) no-repeat;
+  background: url(../images/ash_personal_img.jpg) no-repeat;
   background-size: cover;
 }
 .second-section .mask {
@@ -316,10 +316,10 @@ strong {
   width: 139px;
   height: 22px;
   margin: 1em auto;
-  background: url(images/Mark-Moore-style.png);
+  background: url(../images/Mark-Moore-style.png);
 }
 .section-container.ash .second-section .name-style {
-  background: url(images/Ash-Zou-style.png);
+  background: url(../images/Ash-Zou-style.png);
 }
 .second-section .name {
   width: 95px;
@@ -342,23 +342,23 @@ strong {
   width: 80px;
   height: 55px;
   margin: 0 auto;
-  background: url(images/mark_icon_wh_2.png) no-repeat;
+  background: url(../images/mark_icon_wh_2.png) no-repeat;
 }
 .section-container.ash .second-section .position-icon {
   width: 60px;
   height: 67px;
-  background: url(images/ash_icon.png) no-repeat;
+  background: url(../images/ash_icon.png) no-repeat;
 }
 .second-section .position-img {
   width: 534px;
   height: 286px;
   margin: 30px auto;
-  background: url(images/mark_pm.png) no-repeat;
+  background: url(../images/mark_pm.png) no-repeat;
 }
 .section-container.ash .second-section .position-img {
   width: 454px;
   height: 307px;
-  background: url(images/ash.png) no-repeat;
+  background: url(../images/ash.png) no-repeat;
 }
 .second-section .position-major {
   margin-top: 0.6em;
@@ -399,7 +399,7 @@ strong {
   margin-left: -34px;
   position: absolute;
   bottom: 100px;
-  background: url(images/ash_arrow.png) no-repeat;
+  background: url(../images/ash_arrow.png) no-repeat;
   background-position: 9px 30px;
   color: #fff;
   font-size: 20px;
@@ -435,13 +435,13 @@ strong {
 .avatar {
   width: 100%;
   height: 100%;
-  background: url(images/mark_portrait_1.jpg) no-repeat;
+  background: url(../images/mark_portrait_1.jpg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 1000ms;
   cursor: pointer;
 }
 .section-container.ash .avatar {
-  background-image: url(images/ash_personal_img.jpg);
+  background-image: url(../images/ash_personal_img.jpg);
   background-position: 0;
 }
 .avatar:hover {
@@ -450,10 +450,10 @@ strong {
 .favor {
   width: 100%;
   height: 20%;
-  background: url(images/mark_icon_wh.png) 50% no-repeat;
+  background: url(../images/mark_icon_wh.png) 50% no-repeat;
 }
 .section-container.ash .favor {
-  background-image: url(images/ash_icon_wh.png);
+  background-image: url(../images/ash_icon_wh.png);
 }
 .nav-bar ul {
   list-style: none;
@@ -615,7 +615,7 @@ strong {
   right: -385px;
   width: 385px;
   height: 905px;
-  background: url(images/bigM.png) no-repeat;
+  background: url(../images/bigM.png) no-repeat;
 }
 .all-about-me .about-me .ash {
   position: absolute;
@@ -623,7 +623,7 @@ strong {
   right: -385px;
   width: 358px;
   height: 885px;
-  background: url(images/bigA.png) no-repeat;
+  background: url(../images/bigA.png) no-repeat;
 }
 .all-about-me .about-me table {
   width: 100%;
@@ -678,77 +678,77 @@ strong {
   height: 27px;
   margin-top: -28px;
   margin-left: -20px;
-  background: url(images/skills/ax.png) no-repeat;
+  background: url(../images/skills/ax.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill2 .icon {
   width: 38px;
   height: 27px;
   margin-top: -28px;
   margin-left: -19px;
-  background: url(images/skills/En.png) no-repeat;
+  background: url(../images/skills/En.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill3 .icon {
   width: 81px;
   height: 27px;
   margin-top: -28px;
   margin-left: -40px;
-  background: url(images/skills/Html.png) no-repeat;
+  background: url(../images/skills/Html.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill4 .icon {
   width: 62px;
   height: 27px;
   margin-top: -28px;
   margin-left: -31px;
-  background: url(images/skills/Css.png) no-repeat;
+  background: url(../images/skills/Css.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill5 .icon {
   width: 37px;
   height: 27px;
   margin-top: -28px;
   margin-left: -19px;
-  background: url(images/skills/js.png) no-repeat;
+  background: url(../images/skills/js.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill6 .icon {
   width: 50px;
   height: 27px;
   margin-top: -28px;
   margin-left: -25px;
-  background: url(images/skills/Git.png) no-repeat;
+  background: url(../images/skills/Git.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill7 .icon {
   width: 37px;
   height: 32px;
   margin-top: -28px;
   margin-left: -18px;
-  background: url(images/skills/sketch.png) no-repeat;
+  background: url(../images/skills/sketch.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill8 .icon {
   width: 36px;
   height: 28px;
   margin-top: -28px;
   margin-left: -18px;
-  background: url(images/skills/ps.png) no-repeat;
+  background: url(../images/skills/ps.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill9 .icon {
   width: 30px;
   height: 28px;
   margin-top: -28px;
   margin-left: -15px;
-  background: url(images/skills/ai.png) no-repeat;
+  background: url(../images/skills/ai.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill10 .icon {
   width: 28px;
   height: 28px;
   margin-top: -28px;
   margin-left: -14px;
-  background: url(images/skills/in.png) no-repeat;
+  background: url(../images/skills/in.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills.skill11 .icon {
   width: 34px;
   height: 28px;
   margin-top: -28px;
   margin-left: -17px;
-  background: url(images/skills/Lr.png) no-repeat;
+  background: url(../images/skills/Lr.png) no-repeat;
 }
 .all-about-me .skills .canvas-personal-skills .legend {
   text-align: center;
