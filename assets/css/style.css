@@ -67,9 +67,6 @@ strong {
   background: url(../images/icon-mark.png);
   -webkit-transition-duration: 200ms;
 }
-.big-box:hover .icon {
-  opacity: 0;
-}
 .big-box .nav {
   width: 100%;
   height: 100%;
@@ -79,9 +76,6 @@ strong {
   -webkit-transition-duration: 500ms;
   opacity: 0;
 }
-.big-box:hover .nav {
-  opacity: 1;
-}
 .big-box .nav .name-style {
   width: 139px;
   height: 22px;
@@ -90,9 +84,6 @@ strong {
   margin-left: -70px;
   background: url(../images/Mark-Moore-style.png);
   -webkit-transition-duration: 500ms;
-}
-.big-box:hover .nav .name-style {
-  margin-top: 12px;
 }
 .big-box .nav .name {
   width: 95px;
@@ -104,9 +95,6 @@ strong {
   color: #fff;
   -webkit-transition-duration: 500ms;
 }
-.big-box:hover .nav .name {
-  margin-top: 44px;
-}
 .big-box .position {
   height: 216px;
   color: #DC143C;
@@ -114,12 +102,6 @@ strong {
   font-size: 60px;
   position: relative;
   top: 24%;
-}
-.position-connect {
-  height: 80px;
-  width: 1px;
-  background: #DC143C;
-  margin: 0.2em auto;
 }
 .big-box .category {
   position: relative;
@@ -148,10 +130,7 @@ strong {
   top: 35%;
   -webkit-transition-duration: 200ms;
 }
-.big-box:hover .contacts {
-  margin-top: -10px;
-}
-.big-box .contacts::after {
+.big-box .contacts ::after {
   content: "";
   display: block;
   clear: both;
@@ -173,6 +152,27 @@ strong {
   opacity: 0;
   -webkit-transition-duration: 200ms;
 }
+.big-box:hover .nav {
+  opacity: 1;
+}
+.big-box:hover .nav .name-style {
+  margin-top: 12px;
+}
+.big-box:hover .nav .name {
+  margin-top: 44px;
+}
+.big-box:hover .icon {
+  opacity: 0;
+}
+.big-box:hover .contacts {
+  margin-top: -10px;
+}
+.position-connect {
+  height: 80px;
+  width: 1px;
+  background: #DC143C;
+  margin: 0.2em auto;
+}
 .mark .contacts .wechat {
   position: relative;
   background: url(../images/mark_wechat_bl.png) 100% 0 no-repeat;
@@ -189,13 +189,13 @@ strong {
 .mark .contacts .qq {
   background: url(../images/mark_QQ_bl.png) 50% 0 no-repeat;
 }
-.mark .contacts .qq:hover {
+.mark .contacts .qq :hover {
   background: url(../images/mark_QQ_re.png) 50% 0 no-repeat;
 }
 .mark .contacts .weibo {
   background: url(../images/mark_weibo_bl.png) 0 0 no-repeat;
 }
-.mark .contacts .weibo:hover {
+.mark .contacts .weibo :hover {
   background: url(../images/mark_weibo_re.png) 0 0 no-repeat;
 }
 .big-box.ash {
@@ -211,63 +211,63 @@ strong {
   margin-top: -69px;
   background: url(../images/icon-ash.png);
 }
-.ash .nav {
+.ash .icon .nav {
   background: #DC143C;
 }
-.ash .nav .name-style {
+.ash .icon .nav .name-style {
   width: 90px;
   height: 23px;
   margin-left: -45px;
   background: url(../images/Ash-Zou-style.png);
 }
-.ash .nav .name {
+.ash .icon .nav .name {
   width: 64px;
   height: 12px;
   margin-left: -30px;
   color: #fff;
 }
-.ash .position {
+.ash .icon .position {
   color: #282828;
 }
-.ash .position-connect {
+.ash .icon .position-connect {
   height: 80px;
   width: 1px;
   background: #282828;
 }
-.ash .category ul li {
+.ash .icon .category ul li {
   border-top: 1px solid #282828;
   color: #282828;
 }
-.ash .category ul li:last-child {
+.ash .icon .category ul li:last-child {
   border-bottom: 1px solid #282828;
 }
-.ash .category ul li:hover {
+.ash .icon .category ul li:hover {
   background: #282828;
   color: #DC143C;
 }
-.ash .contacts .wechat {
+.ash .icon .contacts .wechat {
   position: relative;
   background: url(../images/ash_wechat_bl.png) 100% 0 no-repeat;
 }
-.ash .contacts .wechat .qr-code {
+.ash .icon .contacts .wechat .qr-code {
   background: url(../images/ash_qr_code.png);
 }
-.ash .contacts .wechat:hover {
+.ash .icon .contacts .wechat:hover {
   background: url(../images/ash_wechat_wh.png) 100% 0 no-repeat;
 }
-.ash .contacts .wechat:hover .qr-code {
+.ash .icon .contacts .wechat:hover .qr-code {
   opacity: 1;
 }
-.ash .contacts .qq {
+.ash .icon .contacts .qq {
   background: url(../images/ash_QQ_bl.png) 50% 0 no-repeat;
 }
-.ash .contacts .qq:hover {
+.ash .icon .contacts .qq:hover {
   background: url(../images/ash_QQ_wh.png) 50% 0 no-repeat;
 }
-.ash .contacts .weibo {
+.ash .icon .contacts .weibo {
   background: url(../images/ash_weibo_bl.png) 0 0 no-repeat;
 }
-.ash .contacts .weibo:hover {
+.ash .icon .contacts .weibo :hover {
   background: url(../images/ash_weibo_wh.png) 0 0 no-repeat;
 }
 .second-section {
