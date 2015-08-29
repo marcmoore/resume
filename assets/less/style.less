@@ -1077,11 +1077,14 @@ strong {
   border-radius: 100px;
   
   background-color: #DC143C;
-  
+
   transform-style: perserve-3d;
   transform: rotateZ(0) translateY(0) scaleX(1);
-  
   animation: dot 2200ms cubic-bezier(.39,.24,.63,.74) infinite;
+  
+  -webkit-transform-style: perserve-3d;
+  -webkit-transform: rotateZ(0) translateY(0) scaleX(1);
+  -webkit-animation: dot 2200ms cubic-bezier(.39,.24,.63,.74) infinite;
 }
 
 .dot:nth-child(2) { animation-name: dot2; }
