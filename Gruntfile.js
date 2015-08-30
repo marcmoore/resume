@@ -13,7 +13,17 @@ module.exports = function(grunt) {
   	    }
   	  }
   	},
-    
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'assets/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'assets/css',
+          ext: '.min.css'
+        }]
+      }
+    },
     githooks: {
       options: {
         "dest": "../.git/hooks"
@@ -24,9 +34,8 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin that provides the "less" task.
   grunt.loadNpmTasks('grunt-contrib-less');
-  
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-githooks');
 
   // Default task(s).
