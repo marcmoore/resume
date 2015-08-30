@@ -1,18 +1,26 @@
 @font-face {
   font-family: "QuickSand_Light";
-  src: url("../images/fonts/Quicksand_Light.otf");
+  src: url("../images/fonts/Quicksand/Quicksand_Light.otf");
 }
 @font-face {
   font-family: "Quicksand_Bold";
-  src: url("../images/fonts/Quicksand_Bold.otf");
+  src: url("../images/fonts/Quicksand/Quicksand_Bold.otf");
 }
 @font-face {
   font-family: "Allura";
   src: url("../images/fonts/Allura.otf");
 }
+@font-face {
+  font-family: "Maven_Light";
+  src: url("../images/fonts/Maven/MavenProLight-300.otf");
+}
+@font-face {
+  font-family: "Maven_Bold";
+  src: url("../images/fonts/Maven/MavenPro-Bold.ttf");
+}
 html {
   height: 100%;
-  font-family: QuickSand_Light, Helvetica, Arial, Tahoma, sans-serif;
+  font-family: Maven_Light, Helvetica, Arial, Tahoma, sans-serif;
   font-weight: lighter;
 }
 body {
@@ -24,7 +32,7 @@ h1 {
   font-size: 20px;
 }
 h2 {
-  font-family: Quicksand_Bold, Helvetica, Arial, Tahoma, sans-serif;
+  font-family: Maven_Bold, Helvetica, Arial, Tahoma, sans-serif;
   font-size: 14px;
 }
 ul {
@@ -37,26 +45,25 @@ ul {
   color: #DC143C;
 }
 strong {
-  font-family: Quicksand_Bold;
+  font-family: Maven_Bold;
+}
+.clear-fix::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 .first-section {
   width: 100%;
   height: 100%;
 }
-.first-section::after {
-  clear: both;
-}
-.big-box {
+.first-section .big-box {
   width: 50%;
   height: 100%;
   float: left;
   z-index: 100;
   position: relative;
 }
-.big-box.mark {
-  background: #282828;
-}
-.big-box .icon {
+.first-section .big-box .icon {
   width: 78px;
   height: 137px;
   position: relative;
@@ -67,7 +74,7 @@ strong {
   background: url(../images/icon-mark.png);
   -webkit-transition-duration: 200ms;
 }
-.big-box .nav {
+.first-section .big-box .nav {
   width: 100%;
   height: 100%;
   background: #282828;
@@ -76,7 +83,7 @@ strong {
   -webkit-transition-duration: 500ms;
   opacity: 0;
 }
-.big-box .nav .name-style {
+.first-section .big-box .nav .name-style {
   width: 139px;
   height: 22px;
   position: absolute;
@@ -85,7 +92,7 @@ strong {
   background: url(../images/Mark-Moore-style.png);
   -webkit-transition-duration: 500ms;
 }
-.big-box .nav .name {
+.first-section .big-box .nav .name {
   width: 95px;
   height: 12px;
   margin-top: 32px;
@@ -95,7 +102,7 @@ strong {
   color: #fff;
   -webkit-transition-duration: 500ms;
 }
-.big-box .position {
+.first-section .big-box .nav .position {
   height: 216px;
   color: #DC143C;
   text-align: center;
@@ -103,11 +110,17 @@ strong {
   position: relative;
   top: 24%;
 }
-.big-box .category {
+.first-section .big-box .nav .position .position-connect {
+  height: 80px;
+  width: 1px;
+  background: #DC143C;
+  margin: 0.2em auto;
+}
+.first-section .big-box .nav .category {
   position: relative;
   top: 45%;
 }
-.big-box .category ul li {
+.first-section .big-box .nav .category ul li {
   border-top: 1px solid #DC143C;
   height: 50px;
   text-align: center;
@@ -118,31 +131,26 @@ strong {
   -webkit-transition-duration: 200ms;
   cursor: pointer;
 }
-.big-box .category ul li:last-child {
+.first-section .big-box .nav .category ul li:last-child {
   border-bottom: 1px solid #DC143C;
 }
-.big-box .category ul li:hover {
+.first-section .big-box .nav .category ul li:hover {
   background: #DC143C;
   color: #282828;
 }
-.big-box .contacts {
+.first-section .big-box .nav .contacts {
   position: relative;
   top: 35%;
   -webkit-transition-duration: 200ms;
 }
-.big-box .contacts ::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.big-box .contacts > div {
+.first-section .big-box .nav .contacts > div {
   width: 33.3333333%;
   height: 27px;
   float: left;
   -webkit-transition-duration: 200ms;
   cursor: pointer;
 }
-.big-box .contacts .wechat .qr-code {
+.first-section .big-box .nav .contacts .wechat .qr-code {
   width: 102px;
   height: 118px;
   position: absolute;
@@ -152,56 +160,53 @@ strong {
   opacity: 0;
   -webkit-transition-duration: 200ms;
 }
-.big-box:hover .nav {
+.first-section .big-box:hover .nav {
   opacity: 1;
 }
-.big-box:hover .nav .name-style {
+.first-section .big-box:hover .nav .name-style {
   margin-top: 12px;
 }
-.big-box:hover .nav .name {
+.first-section .big-box:hover .nav .name {
   margin-top: 44px;
 }
-.big-box:hover .icon {
+.first-section .big-box:hover .icon {
   opacity: 0;
 }
-.big-box:hover .contacts {
+.first-section .big-box:hover .contacts {
   margin-top: -10px;
 }
-.position-connect {
-  height: 80px;
-  width: 1px;
-  background: #DC143C;
-  margin: 0.2em auto;
+.first-section .big-box.mark {
+  background: #282828;
 }
-.mark .contacts .wechat {
+.first-section .big-box.mark .contacts .wechat {
   position: relative;
   background: url(../images/mark_wechat_bl.png) 100% 0 no-repeat;
 }
-.mark .contacts .wechat .qr-code {
+.first-section .big-box.mark .contacts .wechat .qr-code {
   background: url(../images/mark_qr_code.png);
 }
-.mark .contacts .wechat:hover {
+.first-section .big-box.mark .contacts .wechat:hover {
   background: url(../images/mark_wechat_re.png) 100% 0 no-repeat;
 }
-.mark .contacts .wechat:hover .qr-code {
+.first-section .big-box.mark .contacts .wechat:hover .qr-code {
   opacity: 1;
 }
-.mark .contacts .qq {
+.first-section .big-box.mark .contacts .qq {
   background: url(../images/mark_QQ_bl.png) 50% 0 no-repeat;
 }
-.mark .contacts .qq :hover {
+.first-section .big-box.mark .contacts .qq :hover {
   background: url(../images/mark_QQ_re.png) 50% 0 no-repeat;
 }
-.mark .contacts .weibo {
+.first-section .big-box.mark .contacts .weibo {
   background: url(../images/mark_weibo_bl.png) 0 0 no-repeat;
 }
-.mark .contacts .weibo :hover {
+.first-section .big-box.mark .contacts .weibo :hover {
   background: url(../images/mark_weibo_re.png) 0 0 no-repeat;
 }
-.big-box.ash {
+.first-section .big-box.ash {
   background: #DC143C;
 }
-.ash .icon {
+.first-section .big-box.ash .icon {
   width: 65px;
   height: 138px;
   position: relative;
@@ -211,73 +216,70 @@ strong {
   margin-top: -69px;
   background: url(../images/icon-ash.png);
 }
-.ash .icon .nav {
+.first-section .big-box.ash .nav {
   background: #DC143C;
 }
-.ash .icon .nav .name-style {
+.first-section .big-box.ash .nav .name-style {
   width: 90px;
   height: 23px;
   margin-left: -45px;
   background: url(../images/Ash-Zou-style.png);
 }
-.ash .icon .nav .name {
+.first-section .big-box.ash .nav .name {
   width: 64px;
   height: 12px;
   margin-left: -30px;
   color: #fff;
 }
-.ash .icon .position {
+.first-section .big-box.ash .position {
   color: #282828;
 }
-.ash .icon .position-connect {
+.first-section .big-box.ash .position .position-connect {
   height: 80px;
   width: 1px;
   background: #282828;
 }
-.ash .icon .category ul li {
+.first-section .big-box.ash .category ul li {
   border-top: 1px solid #282828;
   color: #282828;
 }
-.ash .icon .category ul li:last-child {
+.first-section .big-box.ash .category ul li:last-child {
   border-bottom: 1px solid #282828;
 }
-.ash .icon .category ul li:hover {
+.first-section .big-box.ash .category ul li:hover {
   background: #282828;
   color: #DC143C;
 }
-.ash .icon .contacts .wechat {
+.first-section .big-box.ash .contacts .wechat {
   position: relative;
   background: url(../images/ash_wechat_bl.png) 100% 0 no-repeat;
 }
-.ash .icon .contacts .wechat .qr-code {
+.first-section .big-box.ash .contacts .wechat .qr-code {
   background: url(../images/ash_qr_code.png);
 }
-.ash .icon .contacts .wechat:hover {
+.first-section .big-box.ash .contacts .wechat:hover {
   background: url(../images/ash_wechat_wh.png) 100% 0 no-repeat;
 }
-.ash .icon .contacts .wechat:hover .qr-code {
+.first-section .big-box.ash .contacts .wechat:hover .qr-code {
   opacity: 1;
 }
-.ash .icon .contacts .qq {
+.first-section .big-box.ash .contacts .qq {
   background: url(../images/ash_QQ_bl.png) 50% 0 no-repeat;
 }
-.ash .icon .contacts .qq:hover {
+.first-section .big-box.ash .contacts .qq:hover {
   background: url(../images/ash_QQ_wh.png) 50% 0 no-repeat;
 }
-.ash .icon .contacts .weibo {
+.first-section .big-box.ash .contacts .weibo {
   background: url(../images/ash_weibo_bl.png) 0 0 no-repeat;
 }
-.ash .icon .contacts .weibo :hover {
+.first-section .big-box.ash .contacts .weibo :hover {
   background: url(../images/ash_weibo_wh.png) 0 0 no-repeat;
 }
-.second-section {
+.section-container .second-section {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
-}
-.second-section::after {
-  clear: both;
 }
 @-webkit-keyframes portrait {
   0% {
@@ -290,7 +292,7 @@ strong {
     -webkit-transform: scale(1);
   }
 }
-.second-section .self-portrait {
+.section-container .second-section .self-portrait {
   width: 100%;
   height: 100%;
   -webkit-animation-name: "portrait";
@@ -298,82 +300,58 @@ strong {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
 }
-.section-container.mark .second-section .self-portrait {
-  background: url(../images/mark_portrait_3.jpg) no-repeat;
-  background-size: cover;
-}
-.section-container.ash .second-section .self-portrait {
-  background: url(../images/ash_personal_img.jpg) no-repeat;
-  background-size: cover;
-}
-.second-section .mask {
+.section-container .second-section .mask {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
 }
-.second-section .name-style {
+.section-container .second-section .name-style {
   width: 139px;
   height: 22px;
   margin: 1em auto;
   background: url(../images/Mark-Moore-style.png);
 }
-.section-container.ash .second-section .name-style {
-  background: url(../images/Ash-Zou-style.png);
-}
-.second-section .name {
+.section-container .second-section .name {
   width: 95px;
   height: 12px;
   margin: 1em auto;
   text-align: center;
   color: #fff;
 }
-.second-section .position {
+.section-container .second-section .position {
   color: #DC143C;
   text-align: center;
   font-size: 60px;
   position: relative;
   top: 10%;
 }
-.section-container.ash .second-section .position {
-  color: #fff;
-}
-.second-section .position-icon {
+.section-container .second-section .position-icon {
   width: 80px;
   height: 55px;
   margin: 0 auto;
   background: url(../images/mark_icon_wh_2.png) no-repeat;
 }
-.section-container.ash .second-section .position-icon {
-  width: 60px;
-  height: 67px;
-  background: url(../images/ash_icon.png) no-repeat;
-}
-.second-section .position-img {
+.section-container .second-section .position-img {
   width: 534px;
   height: 286px;
   margin: 30px auto;
   background: url(../images/mark_pm.png) no-repeat;
 }
-.section-container.ash .second-section .position-img {
-  width: 454px;
-  height: 307px;
-  background: url(../images/ash.png) no-repeat;
-}
-.second-section .position-major {
+.section-container .second-section .position-major {
   margin-top: 0.6em;
 }
-.second-section .position-minor {
+.section-container .second-section .position-minor {
   margin-top: 0.6em;
 }
-.second-section .contacts {
+.section-container .second-section .contacts {
   position: relative;
   top: 45%;
   width: 192px;
   height: 27px;
   margin: 0 auto;
 }
-.second-section .contacts > div {
+.section-container .second-section .contacts > div {
   width: 34px;
   height: 27px;
   margin: 0 15px;
@@ -382,7 +360,7 @@ strong {
   float: left;
   text-align: center;
 }
-.second-section .contacts .wechat .qr-code {
+.section-container .second-section .contacts .wechat .qr-code {
   width: 102px;
   height: 118px;
   position: absolute;
@@ -392,7 +370,7 @@ strong {
   opacity: 0;
   -webkit-transition-duration: 200ms;
 }
-.second-section .see-more {
+.section-container .second-section .see-more {
   width: 68px;
   height: 57px;
   left: 50%;
@@ -405,15 +383,7 @@ strong {
   font-size: 20px;
   opacity: 0.4;
 }
-.third-section {
-  margin-left: 30%;
-}
-.third-section::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.nav-bar {
+.section-container .nav-bar {
   width: 30%;
   height: 100%;
   top: 0;
@@ -422,17 +392,17 @@ strong {
   box-sizing: border-box;
   -webkit-transition-duration: 200ms;
 }
-.nav-bar.fix {
+.section-container .nav-bar.fix {
   position: fixed;
 }
-.avatar-container {
+.section-container .nav-bar .avatar-container {
   width: 100%;
   height: 20%;
   overflow: hidden;
   z-index: 1;
   position: relative;
 }
-.avatar {
+.section-container .nav-bar .avatar-container .avatar {
   width: 100%;
   height: 100%;
   background: url(../images/mark_portrait_1.jpg) no-repeat;
@@ -440,28 +410,15 @@ strong {
   -webkit-transition-duration: 1000ms;
   cursor: pointer;
 }
-.section-container.ash .avatar {
-  background-image: url(../images/ash_personal_img.jpg);
-  background-position: 0;
-}
-.avatar:hover {
+.section-container .nav-bar .avatar-container .avatar:hover {
   -webkit-transform: scale(1.01);
 }
-.favor {
+.section-container .nav-bar .favor {
   width: 100%;
   height: 20%;
   background: url(../images/mark_icon_wh.png) 50% no-repeat;
 }
-.section-container.ash .favor {
-  background-image: url(../images/ash_icon_wh.png);
-}
-.nav-bar ul {
-  list-style: none;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-padding-start: 0;
-}
-.nav-bar ul li {
+.section-container .nav-bar ul li {
   border-bottom: 1px solid #656565;
   height: 50px;
   text-align: center;
@@ -472,7 +429,7 @@ strong {
   -webkit-transition-duration: 200ms;
   cursor: pointer;
 }
-.nav-bar ul li span {
+.section-container .nav-bar ul li span {
   width: 1px;
   height: 100%;
   display: block;
@@ -480,17 +437,17 @@ strong {
   margin-right: -1px;
   background: #282828;
 }
-.nav-bar ul li span.show {
+.section-container .nav-bar ul li span.show {
   background: #fff;
 }
-.nav-bar ul li:first-child {
+.section-container .nav-bar ul li:first-child {
   border-top: 1px solid #656565;
 }
-.nav-bar ul li:hover,
-.nav-bar ul li.activited {
+.section-container .nav-bar ul li:hover,
+.section-container .nav-bar ul li.activited {
   color: #DC143C;
 }
-.nav-bar .blank {
+.section-container .nav-bar .blank {
   width: 100%;
   height: 100%;
   border-right: 1px solid #656565;
@@ -499,20 +456,23 @@ strong {
   top: 0;
   z-index: 0;
 }
-.nav-bar.style2 ul {
+.section-container .nav-bar.style2 ul {
   z-index: 1;
   position: relative;
 }
-.nav-bar.style2 ul li {
+.section-container .nav-bar.style2 ul li {
   border-collapse: collapse;
   box-sizing: border-box;
 }
-.nav-bar.style2 ul li:hover,
-.nav-bar.style2 ul li.activited {
+.section-container .nav-bar.style2 ul li:hover,
+.section-container .nav-bar.style2 ul li.activited {
   background: #282828;
   color: #DC143C;
 }
-.all-about-work {
+.section-container .third-section {
+  margin-left: 30%;
+}
+.section-container .third-section .all-about-work {
   width: 100%;
   min-height: 100%;
   float: right;
@@ -521,21 +481,22 @@ strong {
   box-sizing: border-box;
   color: #fff;
 }
-.short-desc p {
+.section-container .third-section .all-about-work .short-desc p {
   width: 100%;
   line-height: 24px;
   font-size: 14px;
 }
-.all-about-work ul li {
+.section-container .third-section .all-about-work .project-desc p {
+  line-height: 18px;
+  font-size: 14px;
+}
+.section-container .third-section .all-about-work ul li {
   position: relative;
   margin-left: 480px;
   margin-bottom: 20px;
   height: 300px;
 }
-.all-about-work ul li.style2 {
-  margin-left: 0;
-}
-.all-about-work ul li .project-thumbnail {
+.section-container .third-section .all-about-work ul li .project-thumbnail {
   width: 450px;
   height: 300px;
   background: #9b9b9b;
@@ -544,7 +505,7 @@ strong {
   position: relative;
   box-shadow: 0 0 12px rgba(40, 40, 40, 0.7);
 }
-.all-about-work ul li .project-thumbnail img.gray {
+.section-container .third-section .all-about-work ul li .project-thumbnail img.gray {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
@@ -553,13 +514,7 @@ strong {
   filter: gray;
   -webkit-transition-duration: 1s;
 }
-.all-about-work ul li.style2 .project-thumbnail {
-  clear: both;
-  position: absolute;
-  right: 0;
-  margin-left: 0;
-}
-.all-about-work ul li .project-title {
+.section-container .third-section .all-about-work ul li .project-title {
   position: absolute;
   top: 140px;
   left: 380px;
@@ -567,20 +522,29 @@ strong {
   z-index: 1;
   text-shadow: 4px 4px 10px #282828;
 }
-.all-about-work ul li.style2 .project-title {
-  left: -80px;
-}
-.all-about-work ul li .project-title .project-bottom {
+.section-container .third-section .all-about-work ul li .project-title .project-bottom {
   width: 100px;
   height: 3px;
   background: #DC143C;
 }
-.all-about-work ul li.style2 .project-desc {
+.section-container .third-section .all-about-work ul li.style2 {
+  margin-left: 0;
+}
+.section-container .third-section .all-about-work ul li.style2 .project-thumbnail {
+  clear: both;
+  position: absolute;
+  right: 0;
+  margin-left: 0;
+}
+.section-container .third-section .all-about-work ul li.style2 .project-title {
+  left: -80px;
+}
+.section-container .third-section .all-about-work ul li.style2 .project-desc {
   margin-left: 5px;
   float: left;
   margin-right: 480px;
 }
-.all-about-work ul li:hover img.gray {
+.section-container .third-section .all-about-work ul li:hover img.gray {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
   -ms-filter: grayscale(0%);
@@ -588,28 +552,27 @@ strong {
   filter: grayscale(0%);
   filter: gray;
 }
-.all-about-work ul li .project-desc p {
-  line-height: 18px;
-  font-size: 14px;
+.section-container .forth-section {
+  margin-left: 30%;
 }
-.all-about-me {
+.section-container .forth-section .all-about-me {
   width: 100%;
   position: relative;
   float: right;
 }
-.all-about-me h1 {
+.section-container .forth-section .all-about-me h1 {
   margin: 0;
 }
-.all-about-me p {
+.section-container .forth-section .all-about-me p {
   line-height: 26px;
   font-size: 14px;
 }
-.all-about-me .about-me {
+.section-container .forth-section .all-about-me .about-me {
   position: relative;
   margin-right: 385px;
   padding: 35px;
 }
-.all-about-me .about-me .mark {
+.section-container .forth-section .all-about-me .about-me .mark {
   position: absolute;
   top: 0;
   right: -385px;
@@ -617,7 +580,7 @@ strong {
   height: 905px;
   background: url(../images/bigM.png) no-repeat;
 }
-.all-about-me .about-me .ash {
+.section-container .forth-section .all-about-me .about-me .ash {
   position: absolute;
   top: 0;
   right: -385px;
@@ -625,205 +588,170 @@ strong {
   height: 885px;
   background: url(../images/bigA.png) no-repeat;
 }
-.all-about-me .about-me table {
+.section-container .forth-section .all-about-me .about-me table {
   width: 100%;
 }
-.all-about-me .about-me table td {
+.section-container .forth-section .all-about-me .about-me table td {
   padding-bottom: 30px;
   line-height: 22px;
 }
-.all-about-me .skills {
+.section-container .forth-section .all-about-me .skills {
   padding: 35px;
 }
-.all-about-me .skills::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-.all-about-me .skills .personal-skills {
+.section-container .forth-section .all-about-me .skills .personal-skills {
   position: relative;
 }
-.all-about-me .skills .personal-skills::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-.all-about-me .skills h2 {
+.section-container .forth-section .all-about-me .skills h2 {
   margin-top: 30px;
 }
-.all-about-me .skills .canvas-personal-skills {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills {
   position: relative;
   width: 16.666%;
   margin-top: 30px;
   float: left;
 }
-.all-about-me .skills .ash .canvas-personal-skills {
-  width: 20%;
-}
-.all-about-me .skills .canvas-personal-skills canvas {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills canvas {
   display: block;
   margin: 0 auto;
 }
-.all-about-me .skills .canvas-personal-skills .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills .icon {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 50%;
-  margin-top: -5px;
-  margin-left: -5px;
+  width: 100%;
+  height: 38px;
+  top: 41px;
+  font-size: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #DC143C;
 }
-.all-about-me .skills .canvas-personal-skills.skill1 .icon {
-  width: 40px;
-  height: 27px;
-  margin-top: -28px;
-  margin-left: -20px;
-  background: url(../images/skills/ax.png) no-repeat;
-}
-.all-about-me .skills .canvas-personal-skills.skill2 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill2 .icon {
   width: 38px;
   height: 27px;
   margin-top: -28px;
   margin-left: -19px;
   background: url(../images/skills/En.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills.skill3 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill3 .icon {
   width: 81px;
   height: 27px;
   margin-top: -28px;
   margin-left: -40px;
   background: url(../images/skills/Html.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills.skill4 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill4 .icon {
   width: 62px;
   height: 27px;
   margin-top: -28px;
   margin-left: -31px;
   background: url(../images/skills/Css.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills.skill5 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill5 .icon {
   width: 37px;
   height: 27px;
   margin-top: -28px;
   margin-left: -19px;
   background: url(../images/skills/js.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills.skill6 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill6 .icon {
   width: 50px;
   height: 27px;
   margin-top: -28px;
   margin-left: -25px;
   background: url(../images/skills/Git.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills.skill7 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill7 .icon {
   width: 37px;
   height: 32px;
   margin-top: -28px;
   margin-left: -18px;
   background: url(../images/skills/sketch.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills.skill8 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill8 .icon {
   width: 36px;
   height: 28px;
   margin-top: -28px;
   margin-left: -18px;
   background: url(../images/skills/ps.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills.skill9 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill9 .icon {
   width: 30px;
   height: 28px;
   margin-top: -28px;
   margin-left: -15px;
   background: url(../images/skills/ai.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills.skill10 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill10 .icon {
   width: 28px;
   height: 28px;
   margin-top: -28px;
   margin-left: -14px;
   background: url(../images/skills/in.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills.skill11 .icon {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills.skill11 .icon {
   width: 34px;
   height: 28px;
   margin-top: -28px;
   margin-left: -17px;
   background: url(../images/skills/Lr.png) no-repeat;
 }
-.all-about-me .skills .canvas-personal-skills .legend {
+.section-container .forth-section .all-about-me .skills .canvas-personal-skills .legend {
   text-align: center;
   font-size: 14px;
   line-height: 30px;
 }
-.all-about-me .skills .canvas-professional-skills {
+.section-container .forth-section .all-about-me .skills .canvas-professional-skills {
   float: left;
 }
-.all-about-me .skills .canvas-professional-skills canvas {
+.section-container .forth-section .all-about-me .skills .canvas-professional-skills canvas {
   margin-top: -55px;
 }
-.all-about-me .hire-me {
+.section-container .forth-section .all-about-me .skills .ash .canvas-personal-skills {
+  width: 20%;
+}
+.section-container .forth-section .all-about-me .hire-me {
   padding: 35px;
 }
-.all-about-me .hire-me::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-.all-about-me .hire-me ul {
+.section-container .forth-section .all-about-me .hire-me ul {
   margin: 10px;
 }
-.all-about-me .hire-me ul li {
+.section-container .forth-section .all-about-me .hire-me ul li {
   float: left;
   width: 25%;
 }
-.all-about-me .interest {
+.section-container .forth-section .all-about-me .interest {
   padding: 35px;
 }
-.all-about-me .interest ul {
+.section-container .forth-section .all-about-me .interest ul {
   list-style: none;
   margin-top: 30px;
 }
-.all-about-me .interest ul:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.all-about-me .interest ul li {
+.section-container .forth-section .all-about-me .interest ul li {
   float: left;
   text-align: center;
   width: 12.5%;
 }
-.forth-section {
+.section-container .fifth-section {
   margin-left: 30%;
 }
-.forth-section::after,
-.fifth-section::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.fifth-section {
-  margin-left: 30%;
-}
-.fifth-section .all-about-me .thanks {
+.section-container .fifth-section .all-about-me .thanks {
   padding: 35px;
 }
-.fifth-section .all-about-me .sns {
+.section-container .fifth-section .all-about-me .sns {
   padding: 35px;
 }
-.fifth-section .all-about-me .sns h3 {
+.section-container .fifth-section .all-about-me .sns h3 {
   font-size: 40px;
   margin: 0;
-  font-family: QuickSand_Light, Tahoma, Helvetica, Arial, sans-serif;
+  font-family: Maven_Light, Tahoma, Helvetica, Arial, sans-serif;
 }
-.fifth-section .all-about-me .sns h3 span {
+.section-container .fifth-section .all-about-me .sns h3 span {
   border-bottom: 1px solid #282828;
   -webkit-transition-duration: 300ms;
 }
-.fifth-section .all-about-me .sns h3 span:hover {
+.section-container .fifth-section .all-about-me .sns h3 span:hover {
   background: #DC143C;
 }
-.fifth-section .all-about-me .footer {
+.section-container .fifth-section .all-about-me .footer {
   width: 100%;
   height: 120px;
   display: block;
@@ -833,8 +761,9 @@ strong {
   color: #fff;
   box-sizing: border-box;
 }
-.section-container.ash .fifth-section .all-about-me .footer {
-  background: #DC143C;
+.section-container.mark .second-section .self-portrait {
+  background: url(../images/mark_portrait_3.jpg) no-repeat;
+  background-size: cover;
 }
 .section-container.mark .mark {
   display: block;
@@ -844,6 +773,36 @@ strong {
 .section-container.mark .ash {
   display: none;
   opacity: 0;
+}
+.section-container.ash .second-section .self-portrait {
+  background: url(../images/ash_personal_img.jpg) no-repeat;
+  background-size: cover;
+}
+.section-container.ash .second-section .name-style {
+  background: url(../images/Ash-Zou-style.png);
+}
+.section-container.ash .second-section .position {
+  color: #fff;
+}
+.section-container.ash .second-section .position-icon {
+  width: 60px;
+  height: 67px;
+  background: url(../images/ash_icon.png) no-repeat;
+}
+.section-container.ash .second-section .position-img {
+  width: 454px;
+  height: 307px;
+  background: url(../images/ash.png) no-repeat;
+}
+.section-container.ash .nav-bar .avatar {
+  background-image: url(../images/ash_personal_img.jpg);
+  background-position: 0;
+}
+.section-container.ash .nav-bar .favor {
+  background-image: url(../images/ash_icon_wh.png);
+}
+.section-container.ash .fifth-section .all-about-me .footer {
+  background: #DC143C;
 }
 .section-container.ash .ash {
   display: block;
@@ -872,8 +831,97 @@ strong {
   margin-left: -100px;
   perspective: 600px;
   transform-style: perserve-3d;
+  -webkit-transform-style: perserve-3d;
 }
 /* The dot */
+@keyframes dot {
+  0% {
+    -webkit-transform: rotateZ(0) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+  30% {
+    -webkit-transform: rotateZ(180deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  50% {
+    -webkit-transform: rotateZ(360deg) translateY(-20px) scaleX(1.1);
+    background-color: #ec6b85;
+  }
+  70% {
+    -webkit-transform: rotateZ(540deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  100% {
+    -webkit-transform: rotateZ(720deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+}
+@keyframes dot2 {
+  0% {
+    -webkit-transform: rotateZ(0deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+  30% {
+    -webkit-transform: rotateZ(180deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  50% {
+    -webkit-transform: rotateZ(270deg) translateY(-20px) scaleX(1.1);
+    background-color: #ec6b85;
+  }
+  70% {
+    -webkit-transform: rotateZ(360deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  100% {
+    -webkit-transform: rotateZ(540deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+}
+@keyframes dot3 {
+  0% {
+    -webkit-transform: rotateZ(-180deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+  30% {
+    -webkit-transform: rotateZ(0deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  50% {
+    -webkit-transform: rotateZ(180deg) translateY(-20px) scaleX(1.1);
+    background-color: #ec6b85;
+  }
+  70% {
+    -webkit-transform: rotateZ(360deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  100% {
+    -webkit-transform: rotateZ(540deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+}
+@keyframes dot4 {
+  0% {
+    -webkit-transform: rotateZ(-180deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+  30% {
+    -webkit-transform: rotateZ(0deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  50% {
+    -webkit-transform: rotateZ(90deg) translateY(-20px) scaleX(1.1);
+    background-color: #ec6b85;
+  }
+  70% {
+    -webkit-transform: rotateZ(180deg) translateY(-20px) scaleX(1);
+    background-color: #e94969;
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) translateY(0) scaleX(1);
+    background-color: #DC143C;
+  }
+}
 .dot {
   position: absolute;
   top: 50%;
@@ -887,103 +935,21 @@ strong {
   transform-style: perserve-3d;
   transform: rotateZ(0) translateY(0) scaleX(1);
   animation: dot 2200ms cubic-bezier(0.39, 0.24, 0.63, 0.74) infinite;
+  -webkit-transform-style: perserve-3d;
+  -webkit-transform: rotateZ(0) translateY(0) scaleX(1);
+  -webkit-animation: dot 2200ms cubic-bezier(0.39, 0.24, 0.63, 0.74) infinite;
 }
 .dot:nth-child(2) {
   animation-name: dot2;
+  -webkit-animation-name: dot2;
 }
 .dot:nth-child(3) {
   animation-name: dot3;
+  -webkit-animation-name: dot3;
 }
 .dot:nth-child(4) {
   animation-name: dot4;
-}
-@keyframes dot {
-  0% {
-    transform: rotateZ(0) translateY(0) scaleX(1);
-    background-color: #DC143C;
-  }
-  30% {
-    transform: rotateZ(180deg) translateY(-20px) scaleX(1);
-    background-color: #e94969;
-  }
-  50% {
-    transform: rotateZ(360deg) translateY(-20px) scaleX(1.1);
-    background-color: #ec6b85;
-  }
-  70% {
-    transform: rotateZ(540deg) translateY(-20px) scaleX(1);
-    background-color: #e94969;
-  }
-  100% {
-    transform: rotateZ(720deg) translateY(0) scaleX(1);
-    background-color: #DC143C;
-  }
-}
-@keyframes dot2 {
-  0% {
-    transform: rotateZ(0deg) translateY(0) scaleX(1);
-    background-color: #DC143C;
-  }
-  30% {
-    transform: rotateZ(180deg) translateY(-20px) scaleX(1);
-    background-color: #e94969;
-  }
-  50% {
-    transform: rotateZ(270deg) translateY(-20px) scaleX(1.1);
-    background-color: #ec6b85;
-  }
-  70% {
-    transform: rotateZ(360deg) translateY(-20px) scaleX(1);
-    background-color: #e94969;
-  }
-  100% {
-    transform: rotateZ(540deg) translateY(0) scaleX(1);
-    background-color: #DC143C;
-  }
-}
-@keyframes dot3 {
-  0% {
-    transform: rotateZ(-180deg) translateY(0) scaleX(1);
-    background-color: #DC143C;
-  }
-  30% {
-    transform: rotateZ(0deg) translateY(-20px) scaleX(1);
-    background-color: #e94969;
-  }
-  50% {
-    transform: rotateZ(180deg) translateY(-20px) scaleX(1.1);
-    background-color: #ec6b85;
-  }
-  70% {
-    transform: rotateZ(360deg) translateY(-20px) scaleX(1);
-    background-color: #e94969;
-  }
-  100% {
-    transform: rotateZ(540deg) translateY(0) scaleX(1);
-    background-color: #DC143C;
-  }
-}
-@keyframes dot4 {
-  0% {
-    transform: rotateZ(-180deg) translateY(0) scaleX(1);
-    background-color: #DC143C;
-  }
-  30% {
-    transform: rotateZ(0deg) translateY(-20px) scaleX(1);
-    background-color: #e94969;
-  }
-  50% {
-    transform: rotateZ(90deg) translateY(-20px) scaleX(1.1);
-    background-color: #ec6b85;
-  }
-  70% {
-    transform: rotateZ(180deg) translateY(-20px) scaleX(1);
-    background-color: #e94969;
-  }
-  100% {
-    transform: rotateZ(360deg) translateY(0) scaleX(1);
-    background-color: #DC143C;
-  }
+  -webkit-animation-name: dot4;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .big-box .nav,
