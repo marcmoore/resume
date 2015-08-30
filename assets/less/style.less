@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
 	font-family: "QuickSand_Light";
 	src: url("../images/fonts/Quicksand/Quicksand_Light.otf");
@@ -22,6 +23,10 @@
 	font-family: "Maven_Bold";
 	src: url("../images/fonts/Maven/MavenPro-Bold.ttf");
 }
+
+/* Colors */
+@color-main: #282828;
+@color-second-main: #DC143C;
 	
 html {
 	height: 100%;
@@ -52,7 +57,7 @@ ul {
 }
 
 .red {
-	color: #DC143C;
+	color: @color-second-main;
 }
 
 strong {
@@ -93,7 +98,7 @@ strong {
 		.nav {
 			width: 100%;
 			height: 100%;
-			background: rgba(40, 40, 40, 1);
+			background: @color-main;
 			position: absolute;
 			top: 0;
 			-webkit-transition-duration: 500ms;
@@ -122,7 +127,7 @@ strong {
 			
 			.position {
 				height: 216px;
-				color: #DC143C;
+				color: @color-second-main;
 				text-align: center;
 				font-size: 60px;
 				position: relative;
@@ -131,7 +136,7 @@ strong {
 				.position-connect {
 					height: 80px;
 					width: 1px;
-					background: #DC143C;
+					background: @color-second-main;
 					margin: 0.2em auto;
 				}
 			}
@@ -141,23 +146,23 @@ strong {
 				top: 45%;
 				
 				ul li {
-					border-top: 1px solid #DC143C;
+					border-top: 1px solid @color-second-main;
 					height: 50px;
 					text-align: center;
 					line-height: 50px;
-					color: #DC143C;
+					color: @color-second-main;
 					font-size: 14px;
 					font-weight: lighter;
 					-webkit-transition-duration: 200ms;
 					cursor: pointer;
 					
 					&:last-child {
-						border-bottom: 1px solid #DC143C;
+						border-bottom: 1px solid @color-second-main;
 					}
 					
 					&:hover {
-						background: #DC143C;
-						color: rgba(40, 40, 40, 1);
+						background: @color-second-main;
+						color: @color-main;
 					}
 				}
 			}
@@ -211,7 +216,7 @@ strong {
 		}
 		
 		&.mark {
-			background: rgba(40, 40, 40, 1);
+			background: @color-main;
 			
 			.contacts {
 				.wechat {
@@ -250,7 +255,7 @@ strong {
 		}
 		
 		&.ash {
-			background: #DC143C;
+			background: @color-second-main;
 			
 			.icon {
 				width: 65px;
@@ -264,7 +269,7 @@ strong {
 			}
 			
 			.nav {
-				background: #DC143C;
+				background: @color-second-main;
 				
 				.name-style {
 					width: 90px;
@@ -282,28 +287,28 @@ strong {
 			}
 			
 			.position {
-				color: rgba(40, 40, 40, 1);
+				color: @color-main;
 				
 				.position-connect {
 					height: 80px;
 					width: 1px;
-					background: rgba(40, 40, 40, 1);
+					background: @color-main;
 				}
 			}
 			
 			.category {
 				ul {
 					li {
-						border-top: 1px solid rgba(40, 40, 40, 1);
-						color: rgba(40, 40, 40, 1);
+						border-top: 1px solid @color-main;
+						color: @color-main;
 						
 						&:last-child {
-							border-bottom: 1px solid rgba(40, 40, 40, 1);
+							border-bottom: 1px solid @color-main;
 						}
 						
 						&:hover {
-							background: rgba(40, 40, 40, 1);
-							color: #DC143C;
+							background: @color-main;
+							color: @color-second-main;
 						}
 					}
 				}
@@ -398,7 +403,7 @@ strong {
 		}
 
 		.position {
-			color: #DC143C;
+			color: @color-second-main;
 			text-align: center;
 			font-size: 60px;
 			position: relative;
@@ -476,7 +481,7 @@ strong {
 		height: 100%;
 		top: 0;
 		float: left;
-		border-right: 1px solid #282828;
+		border-right: 1px solid @color-main;
 		box-sizing: border-box;
 		-webkit-transition-duration: 200ms;
 		
@@ -529,7 +534,7 @@ strong {
 					display: block;
 					float: right;
 					margin-right: -1px;
-					background: #282828;
+					background: @color-main;
 					
 					&.show {
 						background: #fff;
@@ -566,8 +571,8 @@ strong {
 					box-sizing: border-box;
 					
 					&:hover, &.activited {
-						background: rgba(40, 40, 40, 1);
-						color: #DC143C;
+						background: @color-main;
+						color: @color-second-main;
 					}
 				}
 			}
@@ -581,7 +586,7 @@ strong {
 			width: 100%;
 			min-height: 100%;
 			float: right;
-			background: rgba(40, 40, 40, 1);
+			background: @color-main;
 			padding: 35px;
 			box-sizing: border-box;
 			color: #fff;
@@ -613,7 +618,7 @@ strong {
 						float: left;
 						margin-left: -480px;
 						position: relative;
-						box-shadow: 0 0 12px rgba(40, 40, 40, 0.7);
+						box-shadow: 0 0 12px fadeout(@color-main, 30%);
 						
 						img.gray {
 							-webkit-filter: grayscale(100%);
@@ -632,12 +637,12 @@ strong {
 						left: 380px;
 						width: 250px;
 						z-index: 1;
-						text-shadow: 4px 4px 10px #282828;
+						text-shadow: 4px 4px 10px @color-main;
 						
 						.project-bottom {
 							width: 100px;
 							height: 3px;
-							background: #DC143C;	
+							background: @color-second-main;	
 						}
 					}
 					
@@ -751,124 +756,27 @@ strong {
 					
 					.icon {
 						position: absolute;
-						width: 10px;
-						height: 10px;
-						top: 50%;
-						left: 50%;
-						margin-top: -5px;
-						margin-left: -5px;
+						width: 100%;
+						height: 38px;
+						top: 41px;
+						font-size: 38px;
+					    line-height: 38px;
+					    text-align: center;
+						color: @color-second-main;
 					}
 					
-					&.skill1 {
-						.icon {
-							width: 40px;
-							height: 27px;
-							margin-top: -28px;
-							margin-left: -20px;
-							//background: url(../images/skills/ax.png) no-repeat;
-						}
-					}
-					
-					&.skill2 {
-						.icon {
-							width: 38px;
-							height: 27px;
-							margin-top: -28px;
-							margin-left: -19px;
-							background: url(../images/skills/En.png) no-repeat;
-						}
-					}
-					
-					&.skill3 {
-						.icon {
-							width: 81px;
-							height: 27px;
-							margin-top: -28px;
-							margin-left: -40px;
-							background: url(../images/skills/Html.png) no-repeat;
-						}
-					}
-					
-					&.skill4 {
-						.icon {
-							width: 62px;
-							height: 27px;
-							margin-top: -28px;
-							margin-left: -31px;
-							background: url(../images/skills/Css.png) no-repeat;
-						}
-					}
-					
-					&.skill5 {
-						.icon {
-							width: 37px;
-							height: 27px;
-							margin-top: -28px;
-							margin-left: -19px;
-							background: url(../images/skills/js.png) no-repeat;
-						}
-					}
-					
-					&.skill6 {
-						.icon {
-							width: 50px;
-							height: 27px;
-							margin-top: -28px;
-							margin-left: -25px;
-							background: url(../images/skills/Git.png) no-repeat;
-						}
-					}
-
-					&.skill7 {
+					&.skill-sketch {
 						.icon {
 							width: 37px;
 							height: 32px;
+							top: 50%;
+    						left: 50%;
 							margin-top: -28px;
 							margin-left: -18px;
 							background: url(../images/skills/sketch.png) no-repeat;
 						}
 					}
 
-					&.skill8 {
-						.icon {
-							width: 36px;
-							height: 28px;
-							margin-top: -28px;
-							margin-left: -18px;
-							background: url(../images/skills/ps.png) no-repeat;
-						}
-					}
-
-					&.skill9 {
-						.icon {
-							width: 30px;
-							height: 28px;
-							margin-top: -28px;
-							margin-left: -15px;
-							background: url(../images/skills/ai.png) no-repeat;
-						}
-					}
-
-					&.skill10 {
-						.icon {
-							width: 28px;
-							height: 28px;
-							margin-top: -28px;
-							margin-left: -14px;
-							background: url(../images/skills/in.png) no-repeat;
-						}
-					}
-
-					&.skill11 {
-						.icon {
-							width: 34px;
-							height: 28px;
-							margin-top: -28px;
-							margin-left: -17px;
-							background: url(../images/skills/Lr.png) no-repeat;
-						}
-					}
-					
 					.legend {
 						text-align: center;
 						font-size: 14px;
@@ -938,11 +846,11 @@ strong {
 					font-family: Maven_Light, Tahoma, Helvetica, Arial,sans-serif;
 					
 					span {
-						border-bottom: 1px solid rgba(40, 40, 40, 1);
+						border-bottom: 1px solid @color-main;
 						-webkit-transition-duration: 300ms;
 						
 						&:hover {
-							background: #DC143C;
+							background: @color-second-main;
 						}
 					}
 				}
@@ -952,7 +860,7 @@ strong {
 				width: 100%;
 				height: 120px;
 				display: block;
-				background: rgba(40, 40, 40, 1);
+				background: @color-main;
 				bottom: 0;
 				padding: 15px 35px;
 				color: #fff;
@@ -1023,7 +931,7 @@ strong {
 		.fifth-section {
 			.all-about-me {
 				.footer {
-					background: #DC143C;
+					background: @color-second-main;
 				}
 			}
 		}
@@ -1043,7 +951,7 @@ strong {
 .pre-loading {
 	width: 100%;
 	height: 100%;
-	background: #282828;
+	background: @color-main;
 	position: fixed;
 	top: 0;
 	z-index: 100;
