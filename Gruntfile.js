@@ -24,6 +24,13 @@ module.exports = function(grunt) {
         }]
       }
     },
+    uglify: {
+      my_target: {
+        files: {
+          'assets/js/init.min.js': ['assets/js/init.js']
+        }
+      }
+    },
     githooks: {
       options: {
         "dest": "../.git/hooks"
@@ -36,6 +43,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-githooks');
 
   // Default task(s).
